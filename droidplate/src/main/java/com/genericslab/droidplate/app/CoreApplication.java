@@ -7,6 +7,7 @@ import com.android.volley.toolbox.Volley;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
+import com.parse.Parse;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
@@ -44,6 +45,12 @@ public abstract class CoreApplication extends Application {
     protected void init() {
         configureCalligraphy();
         configureTracer();
+        configureParse();
+    }
+
+    private void configureParse() {
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this);
     }
 
     private void configureTracer() {
