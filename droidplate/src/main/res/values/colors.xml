@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- theme colors -->
+    <color name="color.primary">#3F51B5</color>
+    <color name="color.primary.dark">#303F9F</color>
+    <color name="color.accent">#FF4081</color>
+    <color name="color.button.normal">#4C94E9</color>
+    <color name="color.button.disable">#305F95</color>
+    <color name="color.button.pressed">@color/color.button.disable</color>
+
+    <!-- Background colors -->
+    <color name="bg.window">#FFF5F5F5</color>
+
+
+    <!-- Material flat UI colors -->
+    <color name="material.flat.turquoise">#1abc9c</color>
+    <color name="material.flat.turquoise.dark">#16a085</color>
+    <color name="material.flat.emerland">#2ecc71</color>
+    <color name="material.flat.emerland.dark">#27ae60</color>
+    <color name="material.flat.peterriver">#3498db</color>
+    <color name="material.flat.peterriver.dark">#2980b9</color>
+    <color name="material.flat.amethyst">#9b59b6</color>
+    <color name="material.flat.amethyst.dark">#8e44ad</color>
+    <color name="material.flat.wetasphalt">#34495e</color>
+    <color name="material.flat.wetasphalt.dark">#2c3e50</color>
+    <color name="material.flat.sunflower">#f1c40f</color>
+    <color name="material.flat.sunflower.dark">#f39c12</color>
+    <color name="material.flat.carrot">#e67e22</color>
+    <color name="material.flat.carrot.dark">#d35400</color>
+    <color name="material.flat.alizarin">#e74c3c</color>
+    <color name="material.flat.alizarin.dark">#c0392b</color>
+    <color name="material.flat.clouds">#ecf0f1</color>
+    <color name="material.flat.clouds.dark">#bdc3c7</color>
+    <color name="material.flat.concrete">#95a5a6</color>
+    <color name="material.flat.concrete.dark">#7f8c8d</color>
+
+
+    <!-- Material core colors -->
+    <color name="material.core.red">#f44336</color>
+    <color name="material.core.pink">#E91E63</color>
+    <color name="material.core.purple">#9C27B0</color>
+    <color name="material.core.deepPurple">#673AB7</color>
+    <color name="material.core.indigo">#3F51B5</color>
+    <color name="material.core.blue">#2196F3</color>
+    <color name="material.core.lightBlue">#03A9F4</color>
+    <color name="material.core.cyan">#00BCD4</color>
+    <color name="material.core.teal">#009688</color>
+    <color name="material.core.green">#4CAF50</color>
+    <color name="material.core.lightGreen">#8BC34A</color>
+    <color name="material.core.lime">#CDDC39</color>
+    <color name="material.core.yellow">#FFEB3B</color>
+    <color name="material.core.amber">#FFC107</color>
+    <color name="material.core.orange">#FF9800</color>
+    <color name="material.core.deepOrange">#FF5722</color>
+    <color name="material.core.brown">#795548</color>
+    <color name="material.core.grey">#9E9E9E</color>
+    <color name="material.core.blueGrey">#607D8B</color>
+
+
+    <!-- Android core colors for easy access -->
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="transparent">@android:color/transparent</color>
+
+    <!-- Text colors -->
+    <color name="text.aabed2">#AABED2</color>
+</resources>

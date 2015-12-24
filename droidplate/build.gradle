@@ -1,0 +1,78 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+
+def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("UTC"))
+
+// Manifest version information!
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 0 // bump for secret builds, public betas, etc.
+
+android {
+    compileSdkVersion Integer.parseInt(project.COMPILE_SDK_VERSION)
+    buildToolsVersion project.BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
+        buildConfigField "String", project.KEY_DEV, project.VAL_DEV
+        buildConfigField "String", project.KEY_ENTITY, project.VAL_ENTITY
+        buildConfigField "String", project.KEY_WEB, project.VAL_WEB
+        buildConfigField "String", project.KEY_GIT_SHA, "\"${gitSha}\""
+        buildConfigField "String", project.KEY_BUILD_TIME, "\"${buildTime}\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:$project.SUPPORT_LIB_VERSION"
+    compile "com.android.support:design:$project.SUPPORT_LIB_VERSION"
+
+    // https://github.com/excilys/androidannotations
+    apt "org.androidannotations:androidannotations:$project.ANDROID_ANNOTATIONS_VERSION"
+    compile "org.androidannotations:androidannotations-api:$project.ANDROID_ANNOTATIONS_VERSION"
+
+    // https://github.com/chrisjenx/Calligraphy
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0@aar'
+
+
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+
+    //
+    // =================== Debug ===================
+    compile 'com.orhanobut:logger:1.11'
+
+    // TODO: just for FastDateFormat class? RnD to remove this lib
+    compile 'org.apache.commons:commons-lang3:3.3.2'
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0]?.processResources?.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        // you should set your package name here if you are using different application IDs
+        // resourcePackageName "your.package.name"
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+        // RELEASE: make it false
+        trace 'true'
+    }
+}
+
+// Acknowledgement
+// https://github.com/vlonjatg/progress-activity

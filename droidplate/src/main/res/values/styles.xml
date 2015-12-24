@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="None">
+    </style>
+
+    <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color.primary</item>
+        <item name="colorPrimaryDark">@color/color.primary.dark</item>
+        <item name="colorAccent">@color/color.accent</item>
+        <item name="android:windowBackground">@color/bg.window</item>
+        <item name="colorButtonNormal">@color/color.button.normal</item>
+
+        <item name="android:buttonStyle">@style/Droid.Theme.Button.Default</item>
+    </style>
+
+    <style name="Droid.Theme.Button.Default" parent="@android:style/Widget.Button">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/margin.lvl.1</item>
+        <item name="android:minHeight">@dimen/height.min.button</item>
+        <item name="android:background">@drawable/color_button_default</item>
+    </style>
+</resources>

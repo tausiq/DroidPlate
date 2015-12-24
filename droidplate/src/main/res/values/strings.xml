@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Hints -->
+    <string name="hint.enter.first.name">First name</string>
+    <string name="hint.enter.last.name">Last name</string>
+    <string name="hint.enter.password">Password</string>
+    <string name="hint.enter.confirm.password">Enter password again</string>
+    <string name="hint.enter.phoneNumber">Phone number</string>
+    <string name="hint.enter.address">Address</string>
+    <string name="hint.enter.postCode">Postcode</string>
+    <string name="hint.enter.city">City</string>
+    <string name="hint.enter.username">Username</string>
+
+
+    <!-- Labels -->
+    <string name="label.registration">Registration</string>
+    <string name="label.login">Login</string>
+    <string name="label.done">Done</string>
+    <string name="label.next">Next</string>
+    <string name="label.add">Add</string>
+    <string name="label.signIn">Sign In</string>
+    <string name="label.forgot.password">Forgot password?</string>
+    <string name="label.tryAgain">Try again</string>
+    <string name="label.cancel">Cancel</string>
+
+    <!-- msg -->
+    <string name="msg.pleaseWait">Please wait for a moment…</string>
+    <string name="msg.moreWait">This is taking unusually long time. You can wait a bit more or cancel the task and trying again later.</string>
+
+    <!-- errors -->
+    <string name="error.required.field">This field is required</string>
+    <string name="error.invalid.email">This email address is not valid</string>
+    <string name="error.invalid.password">This password has to be at least 8 characters and can contain alpha-numeric characters and/or @#$%</string>
+    <string name="error.mismatch.password">The passwords do not match</string>
+
+    <!-- description -->
+    <string name="description.image">Image</string>
+
+    <!-- formatted -->
+    <string name="format.title">&lt;b>Title: &lt;/b>%1$s</string>
+    <string name="format.address">&lt;b>Address: &lt;/b>%1$s</string>
+    <string name="format.city">&lt;b>City: &lt;/b>%1$s</string>
+
+    <!-- Titles -->
+    <string name="title.empty">Nothings Here</string>
+    <string name="title.error">Error occurred</string>
+
+    <!-- Place holders -->
+    <string name="ph.content.empty">We couldn\'t find anything. Tap the button to take your first image</string>
+    <string name="ph.content.error">We could not establish a connection with our servers. Please try again when you are connected to the internet.</string>
+
+
+    <string name="nav.drawer.open">Open navigation drawer</string>
+    <string name="nav.drawer.close">Close navigation drawer</string>
+</resources>

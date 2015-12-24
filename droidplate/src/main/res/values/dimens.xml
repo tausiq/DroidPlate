@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin.lvl.1">4dp</dimen>
+    <dimen name="margin.lvl.2">8dp</dimen>
+    <dimen name="margin.lvl.3">12dp</dimen>
+    <dimen name="margin.lvl.4">16dp</dimen>
+    <dimen name="margin.lvl.5">20dp</dimen>
+    <dimen name="margin.lvl.6">24dp</dimen>
+    <dimen name="margin.lvl.7">28dp</dimen>
+    <dimen name="margin.lvl.8">32dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text.size.1">9sp</dimen>
+    <dimen name="text.size.2">10sp</dimen>
+    <dimen name="text.size.3">12sp</dimen>
+    <dimen name="text.size.4">14sp</dimen>
+    <dimen name="text.size.5">16sp</dimen>
+    <dimen name="text.size.6">18sp</dimen>
+    <dimen name="text.size.7">20sp</dimen>
+    <dimen name="text.size.8">22sp</dimen>
+    <dimen name="text.size.9">24sp</dimen>
+    <dimen name="text.size.10">26sp</dimen>
+    <dimen name="text.size.11">28sp</dimen>
+    <dimen name="text.size.12">30sp</dimen>
+    <dimen name="text.size.13">32sp</dimen>
+
+    <!-- height -->
+    <dimen name="height.default">48dp</dimen>
+    <dimen name="height.min.button">40dp</dimen>
+    <dimen name="height.nav.header">160dp</dimen>
+
+</resources>
