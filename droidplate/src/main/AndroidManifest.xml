@@ -12,6 +12,8 @@
         <meta-data android:name="com.parse.APPLICATION_ID" android:value="@string/parse.application.key"/>
         <meta-data android:name="com.parse.CLIENT_KEY" android:value="@string/parse.client.key" />
 
+        <!-- Fabric configuration -->
+        <meta-data android:name="io.fabric.ApiKey" android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f"/>
 
     </application>
 

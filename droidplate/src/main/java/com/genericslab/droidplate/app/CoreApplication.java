@@ -4,11 +4,13 @@ import android.app.Application;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.crashlytics.android.Crashlytics;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
 import com.parse.Parse;
 
+import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
@@ -46,6 +48,15 @@ public abstract class CoreApplication extends Application {
         configureCalligraphy();
         configureTracer();
         configureParse();
+        configureFabric();
+    }
+
+    private void configureFabric() {
+        final Fabric fabric = new Fabric.Builder(this)
+                .kits(new Crashlytics())
+                .debuggable(true)
+                .build();
+        Fabric.with(fabric);
     }
 
     private void configureParse() {

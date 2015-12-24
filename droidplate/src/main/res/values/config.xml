@@ -3,5 +3,5 @@
 
     <string name="parse.application.key">rRaWZk2e9VjQBhjnzp1lonmmqPUNoxUeIcsZ3XsF</string>
     <string name="parse.client.key">0rjGSiOrf1rJoOmiQmLGe2rtOzbmkxC7FJRwpDOU</string>
-
+    <string name="fabric.crashlytics.key">Change in AndroidManifest.xml file</string>
 </resources>
