@@ -12,12 +12,12 @@ def versionPatch = 0
 def versionBuild = 0 // bump for secret builds, public betas, etc.
 
 android {
-    compileSdkVersion Integer.parseInt(project.COMPILE_SDK_VERSION)
-    buildToolsVersion project.BUILD_TOOLS_VERSION
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion Integer.parseInt(project.MIN_SDK_VERSION)
-        targetSdkVersion Integer.parseInt(project.TARGET_SDK_VERSION)
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
@@ -43,12 +43,12 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile "com.android.support:appcompat-v7:$project.SUPPORT_LIB_VERSION"
-    compile "com.android.support:design:$project.SUPPORT_LIB_VERSION"
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
 
     // https://github.com/excilys/androidannotations
-    apt "org.androidannotations:androidannotations:$project.ANDROID_ANNOTATIONS_VERSION"
-    compile "org.androidannotations:androidannotations-api:$project.ANDROID_ANNOTATIONS_VERSION"
+    apt "org.androidannotations:androidannotations:$annotationsVersion"
+    compile "org.androidannotations:androidannotations-api:$annotationsVersion"
 
     // https://github.com/chrisjenx/Calligraphy
     compile 'uk.co.chrisjenx:calligraphy:2.1.0@aar'
