@@ -21,6 +21,8 @@
         <!-- Fabric configuration -->
         <meta-data android:name="io.fabric.ApiKey" android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f"/>
 
+        <activity android:name=".ui.drawer.DrawerActivity_"/>
+
     </application>
 
 </manifest>

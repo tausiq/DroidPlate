@@ -1,4 +1,4 @@
-package com.genericslab.droidapp;
+package com.genericslab.droidplate.ui.drawer;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.genericslab.droidplate.CoreActivity;
+import com.genericslab.droidplate.R;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -19,7 +20,7 @@ import org.androidannotations.annotations.ViewById;
 /**
  * Created by shahab on 12/28/15.
  */
-@EActivity(R.layout.activity_drawer)
+@EActivity(resName = "activity_drawer")
 public class DrawerActivity extends CoreActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @ViewById Toolbar toolbar;
@@ -45,8 +46,6 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
         toggle.syncState();
 
         navView.setNavigationItemSelectedListener(this);
-
-        loadFragment(LoginFragment_.builder().build());
     }
 
     @Override

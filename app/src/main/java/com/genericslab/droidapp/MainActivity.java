@@ -3,6 +3,7 @@ package com.genericslab.droidapp;
 import android.os.Bundle;
 
 import com.genericslab.droidplate.CoreActivity;
+import com.genericslab.droidplate.ui.drawer.DrawerActivity_;
 
 public class MainActivity extends CoreActivity {
 
