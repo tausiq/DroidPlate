@@ -22,6 +22,7 @@
     <string name="label.forgot.password">Forgot password?</string>
     <string name="label.tryAgain">Try again</string>
     <string name="label.cancel">Cancel</string>
+    <string name="label.save">Save</string>
 
     <!-- msg -->
     <string name="msg.pleaseWait">Please wait for a moment…</string>
@@ -53,6 +54,7 @@
     <string name="nav.drawer.open">Open navigation drawer</string>
     <string name="nav.drawer.close">Close navigation drawer</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Digits configuration -->
+    <string name="dgts__login_digits_text">Registration using phone</string>
 </resources>
