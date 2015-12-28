@@ -28,10 +28,13 @@
     <string name="label.share">Share</string>
     <string name="label.send">Send</string>
     <string name="label.communicate">Communicate</string>
+    <string name="label.upgrade">Upgrade</string>
 
     <!-- msg -->
     <string name="msg.pleaseWait">Please wait for a moment…</string>
     <string name="msg.moreWait">This is taking unusually long time. You can wait a bit more or cancel the task and trying again later.</string>
+    <string name="msg.upgrade.recommended">This is a recommended upgrade. Please upgrade soon as you can.</string>
+    <string name="msg.upgrade.force">This is a mandatory upgrade. App will not work unless you upgrade.</string>
 
     <!-- errors -->
     <string name="error.required.field">This field is required</string>
@@ -66,4 +69,7 @@
     <!-- Demo -->
     <string name="demo.name">Android Studio</string>
     <string name="demo.email">android.studio@android.com</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
