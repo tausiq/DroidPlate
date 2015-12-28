@@ -9,8 +9,8 @@ public class MainActivity extends CoreActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_drawer);
 
-        loadFragment(LoginFragment_.builder().build());
+        DrawerActivity_.intent(this).start();
     }
 }

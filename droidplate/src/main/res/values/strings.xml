@@ -23,6 +23,11 @@
     <string name="label.tryAgain">Try again</string>
     <string name="label.cancel">Cancel</string>
     <string name="label.save">Save</string>
+    <string name="label.import">Import</string>
+    <string name="label.gallery">Gallery</string>
+    <string name="label.share">Share</string>
+    <string name="label.send">Send</string>
+    <string name="label.communicate">Communicate</string>
 
     <!-- msg -->
     <string name="msg.pleaseWait">Please wait for a moment…</string>
@@ -57,4 +62,8 @@
 
     <!-- Digits configuration -->
     <string name="dgts__login_digits_text">Registration using phone</string>
+
+    <!-- Demo -->
+    <string name="demo.name">Android Studio</string>
+    <string name="demo.email">android.studio@android.com</string>
 </resources>
