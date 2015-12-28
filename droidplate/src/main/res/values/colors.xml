@@ -4,6 +4,7 @@
     <color name="color.primary">#3F51B5</color>
     <color name="color.primary.dark">#303F9F</color>
     <color name="color.accent">#FF4081</color>
+    <color name="color.accent2">#FF398622</color>
     <color name="color.button.normal">#4C94E9</color>
     <color name="color.button.disable">#305F95</color>
     <color name="color.button.pressed">@color/color.button.disable</color>
@@ -61,7 +62,11 @@
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
     <color name="transparent">@android:color/transparent</color>
+    <color name="darker_gray">@android:color/darker_gray</color>
 
     <!-- Text colors -->
     <color name="text.aabed2">#AABED2</color>
+    <color name="text.primary">@color/black</color>
+    <color name="text.secondary">@color/darker_gray</color>
+    <color name="text.link">#FF398622</color>
 </resources>

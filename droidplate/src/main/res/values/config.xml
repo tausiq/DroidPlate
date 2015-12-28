@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- TODO: can we move these keys to property file? sample: https://github.com/twitterdev/digits-with-aws/blob/master/app/android/DigitsApp/app/src/main/java/digits/digitsapp/MainActivity.javac-->
+
     <string name="parse.application.key">rRaWZk2e9VjQBhjnzp1lonmmqPUNoxUeIcsZ3XsF</string>
     <string name="parse.client.key">0rjGSiOrf1rJoOmiQmLGe2rtOzbmkxC7FJRwpDOU</string>
     <string name="fabric.crashlytics.key">Change in AndroidManifest.xml file</string>
+    <string name="twitter.key">ongJ1gTXsbkyquc491ZZj0HPt</string>
+    <string name="twitter.secret">yDzrNVSpUZY1BvdR6yCByfw6MauwRsXnzPgiEQSh04MQPJCg4y</string>
 </resources>

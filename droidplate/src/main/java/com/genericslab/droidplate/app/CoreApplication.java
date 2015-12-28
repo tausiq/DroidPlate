@@ -5,10 +5,16 @@ import android.app.Application;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.crashlytics.android.Crashlytics;
+import com.digits.sdk.android.AuthCallback;
+import com.digits.sdk.android.Digits;
+import com.digits.sdk.android.DigitsException;
+import com.digits.sdk.android.DigitsSession;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
 import com.parse.Parse;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
 
 import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -26,6 +32,8 @@ public abstract class CoreApplication extends Application {
     private static CoreApplication sInstance;
 
     private RequestQueue mRequestQueue;
+
+    private AuthCallback digitsAuthCallback;
 
     public static synchronized CoreApplication getInstance() { return sInstance; }
 
@@ -52,11 +60,35 @@ public abstract class CoreApplication extends Application {
     }
 
     private void configureFabric() {
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(getString(R.string.twitter_key), getString(R.string.twitter_secret));
         final Fabric fabric = new Fabric.Builder(this)
-                .kits(new Crashlytics())
-                .debuggable(true)
+                .kits(new Crashlytics(), new TwitterCore(authConfig), new Digits())
+                .debuggable(Config.DEBUG)
                 .build();
         Fabric.with(fabric);
+
+        digitsAuthCallback = new AuthCallback() {
+            @Override
+            public void success(DigitsSession digitsSession, String phoneNumber) {
+                /*
+                session.getPhoneNumber(); OR, phoneNumber
+                TwitterAuthToken authToken = (TwitterAuthToken) session.getAuthToken();
+                String token = authToken.token;
+                String secret = authToken.secret;
+                session.getId();
+                 */
+            }
+
+            @Override
+            public void failure(DigitsException e) {
+                //
+            }
+        };
+
+    }
+
+    public AuthCallback getDigitsAuthCallback() {
+        return digitsAuthCallback;
     }
 
     private void configureParse() {

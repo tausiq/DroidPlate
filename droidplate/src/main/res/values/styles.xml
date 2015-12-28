@@ -7,11 +7,15 @@
     <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color.primary</item>
         <item name="colorPrimaryDark">@color/color.primary.dark</item>
-        <item name="colorAccent">@color/color.accent</item>
+        <item name="colorAccent">@color/color.accent2</item>
         <item name="android:windowBackground">@color/bg.window</item>
         <item name="colorButtonNormal">@color/color.button.normal</item>
 
         <item name="android:buttonStyle">@style/Droid.Theme.Button.Default</item>
+
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/darker_gray</item>
+        <item name="android:textColorLink">#ff398622</item>
     </style>
 
     <style name="Droid.Theme.Button.Default" parent="@android:style/Widget.Button">
