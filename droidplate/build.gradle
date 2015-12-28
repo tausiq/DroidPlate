@@ -90,8 +90,7 @@ apt {
         // logLevel 'INFO'
         // logFile '/var/log/aa.log'
         // RELEASE: make it false
-        trace 'true'
-        library true
+        // trace 'true'
     }
 }
 

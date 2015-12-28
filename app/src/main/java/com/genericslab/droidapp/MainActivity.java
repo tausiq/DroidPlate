@@ -11,5 +11,6 @@ public class MainActivity extends CoreActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        loadFragment(LoginFragment_.builder().build());
     }
 }

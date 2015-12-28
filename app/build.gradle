@@ -27,7 +27,7 @@ repositories {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project (':droidplate')
+    compile project(':droidplate')
 
     apt "org.androidannotations:androidannotations:$annotationsVersion"
 }
