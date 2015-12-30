@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/margin.lvl.2">
+        android:padding="@dimen/margin.2">
 
 
         <ProgressBar
@@ -39,8 +39,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginEnd="@dimen/margin.lvl.1"
-        android:layout_marginRight="@dimen/margin.lvl.1"
+        android:layout_marginEnd="@dimen/margin.1"
+        android:layout_marginRight="@dimen/margin.1"
         android:text="@string/label.cancel"
         android:visibility="gone"/>
 

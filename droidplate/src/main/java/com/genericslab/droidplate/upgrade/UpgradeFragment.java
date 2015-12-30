@@ -35,7 +35,7 @@ public class UpgradeFragment extends Fragment {
 
     @Click
     void btnUpgrade() {
-        
+
     }
 
 }
