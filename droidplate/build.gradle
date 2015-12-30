@@ -29,7 +29,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -51,8 +51,12 @@ dependencies {
     apt "org.androidannotations:androidannotations:$annotationsVersion"
     compile "org.androidannotations:androidannotations-api:$annotationsVersion"
 
+    // =================== UI ===================
     // https://github.com/chrisjenx/Calligraphy
     compile 'uk.co.chrisjenx:calligraphy:2.1.0@aar'
+    // http://joanzapata.com/android-iconify/
+    compile "com.joanzapata.iconify:android-iconify-fontawesome:$iconifyVersion"
+    compile "com.joanzapata.iconify:android-iconify-entypo:$iconifyVersion"
 
 
     compile 'com.mcxiaoke.volley:library:1.0.19'
@@ -76,6 +80,8 @@ dependencies {
     compile('com.digits.sdk.android:digits:1.9.2@aar') {
         transitive = true;
     }
+
+
 }
 
 apt {

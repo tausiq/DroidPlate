@@ -12,6 +12,9 @@ import com.digits.sdk.android.DigitsSession;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.EntypoModule;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.parse.Parse;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterCore;
@@ -35,7 +38,9 @@ public abstract class CoreApplication extends Application {
 
     private AuthCallback digitsAuthCallback;
 
-    public static synchronized CoreApplication getInstance() { return sInstance; }
+    public static synchronized CoreApplication getInstance() {
+        return sInstance;
+    }
 
     @Override
     public void onCreate() {
@@ -50,13 +55,22 @@ public abstract class CoreApplication extends Application {
         init();
     }
 
-    public static float getLogicalDensity() { return LOGICAL_DENSITY; }
+    public static float getLogicalDensity() {
+        return LOGICAL_DENSITY;
+    }
 
     protected void init() {
         configureCalligraphy();
         configureTracer();
         configureParse();
         configureFabric();
+        configureIconify();
+    }
+
+    private void configureIconify() {
+        Iconify
+                .with(new FontAwesomeModule())
+                .with(new EntypoModule());
     }
 
     private void configureFabric() {
