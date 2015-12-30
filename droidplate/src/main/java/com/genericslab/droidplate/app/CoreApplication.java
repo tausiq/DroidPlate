@@ -13,7 +13,6 @@ import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
 import com.joanzapata.iconify.Iconify;
-import com.joanzapata.iconify.fonts.EntypoModule;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.parse.Parse;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
@@ -68,9 +67,7 @@ public abstract class CoreApplication extends Application {
     }
 
     private void configureIconify() {
-        Iconify
-                .with(new FontAwesomeModule())
-                .with(new EntypoModule());
+        Iconify.with(new FontAwesomeModule());
     }
 
     private void configureFabric() {

@@ -56,7 +56,6 @@ dependencies {
     compile 'uk.co.chrisjenx:calligraphy:2.1.0@aar'
     // http://joanzapata.com/android-iconify/
     compile "com.joanzapata.iconify:android-iconify-fontawesome:$iconifyVersion"
-    compile "com.joanzapata.iconify:android-iconify-entypo:$iconifyVersion"
 
 
     compile 'com.mcxiaoke.volley:library:1.0.19'
