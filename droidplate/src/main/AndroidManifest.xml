@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.genericslab.droidplate">
 
@@ -5,23 +6,37 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <!-- Allows Digits to pre-fill the phone number therefore making the login process easier -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <!-- Allows Digits to read the SMS pin therefore making the login process easier -->
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <application
         android:allowBackup="true"
         android:supportsRtl="true">
 
         <!-- Parse configuration -->
-        <meta-data android:name="com.parse.APPLICATION_ID" android:value="@string/parse.application.key"/>
-        <meta-data android:name="com.parse.CLIENT_KEY" android:value="@string/parse.client.key" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="@string/parse.application.key" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="@string/parse.client.key" />
 
         <!-- Fabric configuration -->
-        <meta-data android:name="io.fabric.ApiKey" android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f"/>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f" />
 
-        <activity android:name=".ui.drawer.DrawerActivity_"/>
+        <activity android:name=".ui.drawer.DrawerActivity_" />
+        <activity android:name=".ui.login.DPSignInActivity_"
+            android:label="@string/title.sign.in">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
 
     </application>
 

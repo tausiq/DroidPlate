@@ -28,7 +28,7 @@
 
     <!-- height -->
     <dimen name="height.default">48dp</dimen>
-    <dimen name="height.min.button">40dp</dimen>
+    <dimen name="height.min.button">38dp</dimen>
     <dimen name="height.nav.header">160dp</dimen>
 
 </resources>
