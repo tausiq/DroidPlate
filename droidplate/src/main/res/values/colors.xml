@@ -69,4 +69,8 @@
     <color name="text.primary">@color/black</color>
     <color name="text.secondary">@color/darker_gray</color>
     <color name="text.link">#FF398622</color>
+
+    <!-- Complementary colors -->
+    <color name="light.highlight">#DDDDDD</color>
+    <color name="dark.highlight">#414141</color>
 </resources>
