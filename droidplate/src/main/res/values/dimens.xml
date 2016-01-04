@@ -21,14 +21,21 @@
     <dimen name="text.size.3xl">22sp</dimen>
     <dimen name="text.size.4xl">24sp</dimen>
     <dimen name="text.size.5xl">26sp</dimen>
+    <dimen name="text.size.tab">@dimen/text.size.medium</dimen>
 
     <dimen name="activity_horizontal_margin">@dimen/margin.4</dimen>
     <dimen name="activity_vertical_margin">@dimen/margin.4</dimen>
     <dimen name="fab_margin">@dimen/margin.4</dimen>
+    <dimen name="tab.max.width">264dp</dimen>
+    <dimen name="tab.padding.bottom">16dp</dimen>
+
 
     <!-- height -->
     <dimen name="height.default">48dp</dimen>
     <dimen name="height.min.button">38dp</dimen>
     <dimen name="height.nav.header">160dp</dimen>
+
+    <!-- width -->
+    <dimen name="width.min.button">96dp</dimen>
 
 </resources>

@@ -1,6 +1,7 @@
 package com.genericslab.droidplate.app;
 
 import android.app.Application;
+import android.hardware.Camera;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
@@ -127,6 +128,16 @@ public abstract class CoreApplication extends Application {
         }
 
         return mRequestQueue;
+    }
+
+    private Camera camera;
+
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public void setCamera(Camera camera) {
+        this.camera = camera;
     }
 
 }

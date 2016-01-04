@@ -15,6 +15,8 @@ public class Config {
 
     public static final boolean NETWORK_DELAY = false;
 
+    public static final boolean SKIP = false;
+
     /*
     Configuration
      */

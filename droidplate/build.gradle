@@ -48,6 +48,10 @@ dependencies {
     compile "com.android.support:design:$supportVersion"
     compile "com.android.support:recyclerview-v7:$supportVersion"
 
+    // =================== Play services ===================
+    // https://developers.google.com/android/guides/setup
+    compile "com.google.android.gms:play-services-location:$gsmVersion"
+
     // https://github.com/excilys/androidannotations
     apt "org.androidannotations:androidannotations:$annotationsVersion"
     compile "org.androidannotations:androidannotations-api:$annotationsVersion"
@@ -84,7 +88,7 @@ dependencies {
         transitive = true;
     }
 
-
+    compile "de.greenrobot:eventbus:$eventbusVersion"
 }
 
 apt {

@@ -37,6 +37,9 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".helper.location.FetchAddressIntentService"
+            android:exported="false"/>
+
 
     </application>
 

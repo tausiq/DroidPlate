@@ -35,6 +35,8 @@ project.ext {
     annotationsVersion = "3.3.2"
     iconifyVersion = "2.1.0"
     glideVersion = "3.6.1"
+    gsmVersion = "8.3.0"
+    eventbusVersion = "2.4.0"
 }
 
 task clean(type: Delete) {

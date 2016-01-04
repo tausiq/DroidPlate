@@ -17,9 +17,8 @@
     </style>
 
     <style name="Droid.Theme.Button.Default" parent="@android:style/Widget.Button">
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginTop">@dimen/margin.1</item>
         <item name="android:minHeight">@dimen/height.min.button</item>
+        <item name="android:minWidth">@dimen/width.min.button</item>
         <item name="android:background">@drawable/color_button_default</item>
     </style>
 
