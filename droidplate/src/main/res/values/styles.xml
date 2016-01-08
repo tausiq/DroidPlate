@@ -7,7 +7,7 @@
     <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color.primary</item>
         <item name="colorPrimaryDark">@color/color.primary.dark</item>
-        <item name="colorAccent">@color/color.accent2</item>
+        <item name="colorAccent">@color/color.accent</item>
         <item name="android:windowBackground">@color/bg.window</item>
         <item name="colorButtonNormal">@color/color.button.normal</item>
         <item name="android:textColorPrimary">@color/black</item>

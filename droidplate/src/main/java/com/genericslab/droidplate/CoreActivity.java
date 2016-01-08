@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.genericslab.droidplate.app.CoreApplication;
+import com.genericslab.droidplate.helper.Validate;
 import com.genericslab.droidplate.ui.dialog.LockProgressDialog;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -64,7 +65,13 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
         FragmentTransaction t = fragmentManager.beginTransaction();
         t.replace(R.id.mainView, fragment, "main");
         fragmentManager.popBackStack();
-        t.commit();
+        // TODO: we have to allow state loss here
+        // since this function can get called from an AsyncTask which
+        // could be finishing after our app has already committed state
+        // and is about to get shutdown.  What we *should* do is
+        // not commit anything in an AsyncTask, but that's a bigger
+        // change than we want now.
+        t.commitAllowingStateLoss();
     }
 
     /**
@@ -72,6 +79,7 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
      * @param fragment
      */
     public void loadChildFragment(Fragment fragment) {
+        Validate.notNull(fragment);
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.mainView, fragment, "main")

@@ -15,7 +15,7 @@ public class Config {
 
     public static final boolean NETWORK_DELAY = false;
 
-    public static final boolean SKIP = false;
+    public static final boolean SKIP = true;
 
     /*
     Configuration
@@ -29,6 +29,8 @@ public class Config {
     public static final int REQUEST_TIMEOUT_MILLIS = 10 * 1000; // 10 seconds
 
     public static final int NETWORK_DELAY_SECONDS = 3;
+
+    public static final String MAIN_ACTIVITY = "de.danoeh.antennapod.activity.MainActivity";
 
     // Calligraphy - custom fonts
     public static final int DEFAULT_FONT_PATH_RES = R.string.fonts_noto_sans_regular;

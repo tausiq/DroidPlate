@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- theme colors -->
-    <color name="color.primary">#3F51B5</color>
-    <color name="color.primary.dark">#303F9F</color>
-    <color name="color.accent">#FF4081</color>
-    <color name="color.accent2">#FF398622</color>
-    <color name="color.button.normal">#4C94E9</color>
-    <color name="color.button.disable">#305F95</color>
-    <color name="color.button.pressed">@color/color.button.disable</color>
+    <color name="color.primary">#009688</color>
+    <color name="color.primary.dark">#00796B</color>
+    <color name="color.primary.light">#B2DFDB</color>
+    <color name="color.accent">#536DFE</color>
+    <color name="color.button.normal">@color/color.accent</color>
+    <color name="color.button.disable">#3f51b5</color>
+    <color name="color.button.pressed">#448AFF</color>
+    <color name="color.divider">#B6B6B6</color>
 
     <!-- Background colors -->
     <color name="bg.window">#FFF5F5F5</color>
@@ -65,10 +66,9 @@
     <color name="darker_gray">@android:color/darker_gray</color>
 
     <!-- Text colors -->
-    <color name="text.aabed2">#AABED2</color>
-    <color name="text.primary">@color/black</color>
-    <color name="text.secondary">@color/darker_gray</color>
-    <color name="text.link">#FF398622</color>
+    <color name="text.primary">#212121</color>
+    <color name="text.secondary">#727272</color>
+    <color name="text.link">@color/color.accent</color>
 
     <!-- Complementary colors -->
     <color name="light.highlight">#DDDDDD</color>
