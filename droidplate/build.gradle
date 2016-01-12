@@ -34,11 +34,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
 }
 
 repositories {
@@ -53,6 +48,8 @@ dependencies {
     compile "com.android.support:appcompat-v7:$supportVersion"
     compile "com.android.support:design:$supportVersion"
     compile "com.android.support:recyclerview-v7:$supportVersion"
+    compile "com.android.support:gridlayout-v7:$supportVersion"
+    compile "com.android.support:cardview-v7:$supportVersion"
 
     // =================== Play services ===================
     // https://developers.google.com/android/guides/setup
@@ -83,7 +80,7 @@ dependencies {
     // compile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
 
     // TODO: just for FastDateFormat class? RnD to remove this lib
-    compile 'org.apache.commons:commons-lang3:3.3.2'
+    compile "org.apache.commons:commons-lang3:$commonslangVersion"
 
     // =================== Parse ===================
     // https://github.com/ParsePlatform/Parse-SDK-Android
@@ -100,7 +97,8 @@ dependencies {
 
     compile "de.greenrobot:eventbus:$eventbusVersion"
 
-    // compile 'io.realm:realm-android:0.82.2'
+    // realm.io/docs/java/latest/
+    compile 'io.realm:realm-android:0.87.2'
 }
 
 apt {

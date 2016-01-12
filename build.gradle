@@ -3,6 +3,8 @@
 buildscript {
     repositories {
         jcenter()
+
+        // CONFIG
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
@@ -11,9 +13,11 @@ buildscript {
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
+        // CONFIG
         // https://bitbucket.org/hvisser/android-apt
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
+        // CONFIG
         // https://twittersdk.artifactoryonline.com/twittersdk/public/io/fabric/tools/gradle/
         classpath 'io.fabric.tools:gradle:1.21.2'
     }
@@ -25,6 +29,7 @@ allprojects {
     }
 }
 
+// CONFIG
 project.ext {
     compileSdkVersion = 23
     buildToolsVersion = "23.0.2"
@@ -37,6 +42,7 @@ project.ext {
     glideVersion = "3.6.1"
     gsmVersion = "8.3.0"
     eventbusVersion = "2.4.0"
+    commonslangVersion = "3.4"
 }
 
 task clean(type: Delete) {

@@ -9,17 +9,19 @@ public class Config {
 
     public static final boolean DEBUG = false;
 
-    public static final boolean FILL_DATA = false;
+    public static final boolean FILL_DATA = true;
 
     public static final boolean SECRET_BUILD = false;
 
     public static final boolean NETWORK_DELAY = false;
 
-    public static final boolean SKIP = true;
+    public static final boolean SKIP = false;
 
     /*
     Configuration
      */
+    public static final String DEFAULT_USER_NAME = "Android Studio";
+    public static final String DEFAULT_EMAIL = "android.studio@android.com";
 
     public static final String LOG_TAG = "debug-app";
 
