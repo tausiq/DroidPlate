@@ -5,6 +5,11 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    dexOptions {
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+
     defaultConfig {
         applicationId "com.genericslab.droidapp"
         minSdkVersion rootProject.ext.minSdkVersion

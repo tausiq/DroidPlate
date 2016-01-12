@@ -36,15 +36,18 @@
     <string name="label.send">Send</string>
     <string name="label.communicate">Communicate</string>
     <string name="label.upgrade">Upgrade</string>
+    <string name="label.home">Home</string>
+    <string name="label.Favorites">Favorites</string>
+    <string name="label.Categories">Categories</string>
 
     <!-- Prompt -->
     <string name="prompt.registration"><u>Not registered yet? <b>Sign up now</b></u></string>
 
     <!-- msg -->
     <string name="msg.pleaseWait">Please wait for a moment…</string>
-    <string name="msg.moreWait">This is taking unusually long time. You can wait a bit more or cancel the task and trying again later.</string>
-    <string name="msg.upgrade.recommended">This is a recommended upgrade. Please upgrade soon as you can.</string>
-    <string name="msg.upgrade.force">This is a mandatory upgrade. App will not work unless you upgrade.</string>
+    <string name="msg.waitMore">This is taking unusually long time. You can wait a bit more or cancel the task and trying again later.</string>
+    <string name="msg.recommendedUpgrade">This is a recommended upgrade. Please upgrade soon as you can.</string>
+    <string name="msg.forceUpgrade">This is a mandatory upgrade. App will not work unless you upgrade.</string>
     <string name="msg.registration">Not registered? <b>Sign up now</b></string>
 
     <!-- errors -->
@@ -57,6 +60,11 @@
     <string name="error.location.invalid.latlong">Invalid latitude or longitude used</string>
     <string name="error.location.no.address.found">Sorry, no address found</string>
     <string name="error.location.no.data.provided">No location data provided</string>
+    <string name="error.connection">It appears that you are not connected with internet. Please make sure you have an active connection and try again.</string>
+    <string name="error.connection.lost">We have lost you. It appears that you are not connected with internet.</string>
+    <string name="error.generic.server">We are sorry. Our server is too busy to process your request. Please try again later.</string>
+    <string name="error.generic.internal">We are sorry. This feature is not available right now. Please try again later.</string>
+
 
     <!-- description -->
     <string name="description.image">Image</string>

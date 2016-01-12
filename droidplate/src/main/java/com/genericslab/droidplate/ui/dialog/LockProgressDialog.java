@@ -99,7 +99,7 @@ public class LockProgressDialog extends AppCompatDialogFragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                txtProgressMessage.setText(R.string.msg_moreWait);
+                txtProgressMessage.setText(R.string.msg_waitMore);
                 btnNegative.setVisibility(View.VISIBLE);
             }
         }, Config.TASK_TIMEOUT_MILLIS);

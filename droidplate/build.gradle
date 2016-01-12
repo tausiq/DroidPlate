@@ -28,11 +28,30 @@ android {
         buildConfigField "String", project.KEY_BUILD_TIME, "\"${buildTime}\""
     }
     buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
         release {
+            debuggable false
             // RELEASE: use proguard, minifyEnabled true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        abortOnError false
+        textReport true
+        textOutput 'stdout'
+        fatal 'UnusedResources'
     }
 }
 
@@ -99,6 +118,8 @@ dependencies {
 
     // realm.io/docs/java/latest/
     compile 'io.realm:realm-android:0.87.2'
+
+    compile 'com.google.code.gson:gson:1.7.1'
 }
 
 apt {

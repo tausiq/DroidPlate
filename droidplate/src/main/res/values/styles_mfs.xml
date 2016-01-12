@@ -20,4 +20,8 @@
     <style name="Droid.Theme.Button.MFS.Sandrift">
         <item name="android:background">@drawable/button_mfs_sandrift</item>
     </style>
+
+    <style name="Droid.Theme.Button.MFS.Paprika">
+        <item name="android:background">@drawable/button_mfs_paprika</item>
+    </style>
 </resources>
