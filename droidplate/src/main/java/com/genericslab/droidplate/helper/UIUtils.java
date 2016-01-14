@@ -31,6 +31,13 @@ public class UIUtils {
                 .show();
     }
 
+    public static void alert(Context context, int layoutRes) {
+        new AlertDialog.Builder(context)
+                .setView(layoutRes)
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
+    }
+
     public static void confirm(Context context, String msg, DialogInterface.OnClickListener listener) {
         confirm(context, null, msg, listener);
     }

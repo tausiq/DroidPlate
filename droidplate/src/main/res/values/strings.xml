@@ -64,6 +64,7 @@
     <string name="error.connection.lost">We have lost you. It appears that you are not connected with internet.</string>
     <string name="error.generic.server">We are sorry. Our server is too busy to process your request. Please try again later.</string>
     <string name="error.generic.internal">We are sorry. This feature is not available right now. Please try again later.</string>
+    <string name="error.externalStorageSpace">No external storage is available. Please make sure that external storage is mounted so that the app can work properly.</string>
 
 
     <!-- description -->

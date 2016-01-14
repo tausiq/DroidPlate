@@ -29,18 +29,21 @@
             android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f" />
 
         <activity android:name=".ui.drawer.DrawerActivity_" />
-        <activity android:name=".ui.login.DPSignInActivity_"
+        <activity
+            android:name=".ui.login.DPSignInActivity_"
             android:noHistory="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service android:name=".helper.location.FetchAddressIntentService"
-            android:exported="false"/>
+        <service
+            android:name=".helper.location.FetchAddressIntentService"
+            android:exported="false" />
 
-
+        <activity android:name=".util.StorageErrorActivity_"></activity>
     </application>
 
 </manifest>
