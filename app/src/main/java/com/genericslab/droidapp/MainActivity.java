@@ -12,5 +12,6 @@ public class MainActivity extends CoreActivity {
     @AfterViews
     void afterViews() {
         DrawerActivity_.intent(this).start();
+        finish();
     }
 }

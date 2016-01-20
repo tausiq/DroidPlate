@@ -35,7 +35,7 @@ public class FBLoginManager {
     FacebookCallback<LoginResult> facebookCallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
-            Tracer.d("FB Access token: " + loginResult.getAccessToken());
+            Tracer.d("FB Access token: " + loginResult.getAccessToken().getToken());
             EventBus.getDefault().post(loginResult);
         }
 
