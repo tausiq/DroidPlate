@@ -1,17 +1,16 @@
 package com.genericslab.droidapp;
 
-import android.os.Bundle;
-
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.ui.drawer.DrawerActivity_;
 
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EActivity;
+
+@EActivity(R.layout.activity_main)
 public class MainActivity extends CoreActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drawer);
-
+    @AfterViews
+    void afterViews() {
         DrawerActivity_.intent(this).start();
     }
 }

@@ -22,8 +22,6 @@ android {
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
 
         buildConfigField "String", project.KEY_DEV, project.VAL_DEV
-        buildConfigField "String", project.KEY_ENTITY, project.VAL_ENTITY
-        buildConfigField "String", project.KEY_WEB, project.VAL_WEB
         buildConfigField "String", project.KEY_GIT_SHA, "\"${gitSha}\""
         buildConfigField "String", project.KEY_BUILD_TIME, "\"${buildTime}\""
     }

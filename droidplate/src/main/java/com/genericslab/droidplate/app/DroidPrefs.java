@@ -23,4 +23,7 @@ public interface DroidPrefs {
 
     @DefaultString(Config.DEFAULT_EMAIL)
     String userEmail();
+
+    @DefaultString("")
+    String accessToken();
 }

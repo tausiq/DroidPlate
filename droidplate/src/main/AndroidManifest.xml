@@ -38,8 +38,7 @@
 
         <activity android:name=".ui.drawer.DrawerActivity_" />
         <activity
-            android:name=".ui.login.DPSignInActivity_"
-            android:noHistory="true">
+            android:name=".ui.login.DPSignInActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

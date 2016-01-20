@@ -90,6 +90,10 @@ public class FBLoginManager {
         return ret;
     }
 
+    public CallbackManager getCallbackManager() {
+        return callbackManager;
+    }
+
     public void click() {
         fbLoginButton.performClick();
     }

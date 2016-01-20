@@ -88,8 +88,8 @@ public class DPLoginFragment extends CoreFragment {
     private void gotoNextScreen() {
         try {
             Intent intent = new Intent(getActivity(), Class.forName(Config.MAIN_ACTIVITY));
-            intent.putExtra("feedUrl", "http://feeds.feedburner.com/tedtalks_video ");
             startActivity(intent);
+            getActivity().finish();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -105,7 +105,13 @@ public class DPLoginFragment extends CoreFragment {
         FBLoginManager.getInstance().init(getActivity(), this).click();
     }
 
+    /**
+     * This method will be called after successful facebook login
+     *
+     * @param loginResult Use this to get Access token
+     */
     public void onEvent(LoginResult loginResult) {
+        prefs.accessToken().put(loginResult.getAccessToken().getToken());
         prefs.isLoggedIn().put(true);
         gotoNextScreen();
     }
@@ -157,5 +163,10 @@ public class DPLoginFragment extends CoreFragment {
         EventBus.getDefault().unregister(this);
     }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        FBLoginManager.getInstance().getCallbackManager().onActivityResult(requestCode, resultCode, data);
+    }
 
 }

@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.genericslab.droidplate.app.CoreApplication;
 import com.genericslab.droidplate.helper.Validate;
+import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.ui.dialog.LockProgressDialog;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -27,6 +28,8 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Tracer.v(this.getClass().getSimpleName() + " started");
 
         setTag(this.getClass().getSimpleName());
         getSupportFragmentManager().addOnBackStackChangedListener(this);

@@ -7,7 +7,7 @@ import com.genericslab.droidplate.R;
  */
 public class Config {
 
-    public static final boolean DEBUG = false;
+    public static final boolean DEBUG = true;
 
     public static final boolean FILL_DATA = true;
 
@@ -32,7 +32,7 @@ public class Config {
 
     public static final int NETWORK_DELAY_SECONDS = 3;
 
-    public static final String MAIN_ACTIVITY = "de.danoeh.antennapod.activity.MainActivity";
+    public static final String MAIN_ACTIVITY = "com.genericslab.droidapp.MainActivity_";
 
     // Calligraphy - custom fonts
     public static final int DEFAULT_FONT_PATH_RES = R.string.fonts_noto_sans_regular;
