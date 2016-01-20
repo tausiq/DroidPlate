@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.digits.sdk.android.DigitsAuthButton;
+import com.facebook.login.LoginResult;
 import com.genericslab.droidplate.CoreFragment;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.app.CoreApplication;
@@ -23,6 +24,8 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.sharedpreferences.Pref;
+
+import de.greenrobot.event.EventBus;
 
 
 /**
@@ -46,6 +49,8 @@ public class DPLoginFragment extends CoreFragment {
 
     @Pref
     DroidPrefs_ prefs;
+
+    FBLoginManager fbLoginManager;
 
 
     public DPLoginFragment() {
@@ -97,6 +102,10 @@ public class DPLoginFragment extends CoreFragment {
 
     @Click
     void btnFacebook() {
+        FBLoginManager.getInstance().init(getActivity(), this).click();
+    }
+
+    public void onEvent(LoginResult loginResult) {
         prefs.isLoggedIn().put(true);
         gotoNextScreen();
     }
@@ -135,4 +144,18 @@ public class DPLoginFragment extends CoreFragment {
             btnLogin.setEnabled(false);
         }
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+
 }

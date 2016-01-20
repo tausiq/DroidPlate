@@ -1,5 +1,7 @@
 <resources>
 
+    <!--<string name="app.name">DroidApp</string>-->
+
     <!-- Hints -->
     <string name="hint.enter.first.name">First name</string>
     <string name="hint.enter.last.name">Last name</string>

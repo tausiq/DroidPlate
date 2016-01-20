@@ -10,6 +10,7 @@ import com.digits.sdk.android.AuthCallback;
 import com.digits.sdk.android.Digits;
 import com.digits.sdk.android.DigitsException;
 import com.digits.sdk.android.DigitsSession;
+import com.facebook.FacebookSdk;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
@@ -65,6 +66,11 @@ public abstract class CoreApplication extends Application {
         configureParse();
         configureFabric();
         configureIconify();
+        configureSocial();
+    }
+
+    private void configureSocial() {
+        FacebookSdk.sdkInitialize(getApplicationContext());
     }
 
     private void configureIconify() {

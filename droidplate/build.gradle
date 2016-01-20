@@ -120,6 +120,9 @@ dependencies {
     compile 'io.realm:realm-android:0.87.2'
 
     compile 'com.google.code.gson:gson:1.7.1'
+
+    // http://mvnrepository.com/artifact/com.facebook.android/facebook-android-sdk
+    compile 'com.facebook.android:facebook-android-sdk:4.9.0'
 }
 
 apt {

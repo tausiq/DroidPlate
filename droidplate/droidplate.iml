@@ -97,10 +97,10 @@
     <orderEntry type="library" exported="" name="support-v4-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="commons-lang3-3.4" level="project" />
     <orderEntry type="library" exported="" name="okhttp-2.2.0" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-integration-1.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-23.1.1" level="project" />
-    <orderEntry type="library" exported="" name="glide-3.6.1" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-integration-1.3.1" level="project" />
     <orderEntry type="library" exported="" name="bolts-android-1.3.0" level="project" />
+    <orderEntry type="library" exported="" name="glide-3.6.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="okio-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="fabric-1.3.10" level="project" />
@@ -116,11 +116,13 @@
     <orderEntry type="library" exported="" name="androidannotations-api-3.3.2" level="project" />
     <orderEntry type="library" exported="" name="play-services-basement-8.3.0" level="project" />
     <orderEntry type="library" exported="" name="play-services-maps-8.3.0" level="project" />
+    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
     <orderEntry type="library" exported="" name="bolts-applinks-1.3.0" level="project" />
     <orderEntry type="library" exported="" name="calligraphy-2.1.0" level="project" />
     <orderEntry type="library" exported="" name="twitter-core-1.6.2" level="project" />
     <orderEntry type="library" exported="" name="answers-1.3.6" level="project" />
     <orderEntry type="library" exported="" name="android-iconify-2.1.0" level="project" />
+    <orderEntry type="library" exported="" name="facebook-android-sdk-4.9.0" level="project" />
     <orderEntry type="library" exported="" name="logger-1.11" level="project" />
   </component>
 </module>
