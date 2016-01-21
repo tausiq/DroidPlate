@@ -24,9 +24,23 @@
             android:value="@string/parse.client.key" />
 
         <!-- Fabric configuration -->
+        <!-- CONFIG: Change fabric API key  -->
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="55782618d4d6d04cfd5ec8de3462db67781dbb2f" />
+
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.common.MoPubBrowser"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:name="com.mopub.mobileads.MraidVideoPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
 
         <!-- Facebook configuration -->
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook.appId"/>

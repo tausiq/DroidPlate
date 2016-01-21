@@ -111,6 +111,12 @@ dependencies {
     compile('com.digits.sdk.android:digits:1.9.2@aar') {
         transitive = true;
     }
+    compile('com.mopub.sdk.android:mopub:4.2.0@aar') {
+        transitive = true;
+    }
+    compile('io.fabric.sdk.android:fabric:1.3.10@aar') {
+        transitive = true;
+    }
 
     compile "de.greenrobot:eventbus:$eventbusVersion"
 

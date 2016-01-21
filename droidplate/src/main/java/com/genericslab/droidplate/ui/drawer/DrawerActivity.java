@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.R;
+import com.mopub.mobileads.MoPubView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -27,6 +28,8 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
     @ViewById FloatingActionButton fab;
     @ViewById DrawerLayout drawerLayout;
     @ViewById NavigationView navView;
+    @ViewById
+    MoPubView mopubAdd;
 
     @AfterViews
     void afterViews() {
@@ -46,6 +49,17 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
         toggle.syncState();
 
         navView.setNavigationItemSelectedListener(this);
+
+
+        mopubAdd.setAdUnitId("d4a0aba637d64a9f9a05a575fa757ac2");
+        mopubAdd.loadAd();
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        mopubAdd.destroy();
+        super.onDestroy();
     }
 
     @Override
