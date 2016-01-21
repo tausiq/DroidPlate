@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import com.digits.sdk.android.DigitsAuthButton;
 import com.facebook.login.LoginResult;
+import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.CoreFragment;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.app.CoreApplication;
 import com.genericslab.droidplate.app.DroidPrefs_;
 import com.genericslab.droidplate.config.Config;
-import com.genericslab.droidplate.helper.UIUtils;
 import com.genericslab.droidplate.helper.Validate;
 
 import org.androidannotations.annotations.AfterTextChange;
@@ -97,7 +97,8 @@ public class DPLoginFragment extends CoreFragment {
 
     @Click
     void btnRegistration() {
-        UIUtils.alert(getActivity(), "Please contact administrator for username and password");
+        ((CoreActivity) getActivity()).loadFragment(DPRegistrationFragment_.builder().build());
+//        UIUtils.alert(getActivity(), "Please contact administrator for username and password");
     }
 
     @Click

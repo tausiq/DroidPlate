@@ -1,0 +1,67 @@
+<android.support.v7.widget.ButtonBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context=" com.genericslab.droidplate.ui.login.DPRegistrationFragment">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_brand"
+        android:layout_margin="@dimen/margin.4"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtEmailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin.2"
+            android:hint="@string/hint.enter.email"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/txtPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin.4"
+            android:hint="@string/hint.enter.password"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/label.login"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtTos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin.4"
+        android:text="@string/prompt.tos"
+        android:textSize="@dimen/text.size.small"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin.4"
+        android:text="@string/label.registration"
+        android:textColor="@color/white"/>
+
+</android.support.v7.widget.ButtonBarLayout>

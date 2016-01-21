@@ -1,0 +1,60 @@
+package com.genericslab.droidplate.ui.common;
+
+
+import android.support.v4.app.Fragment;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import com.genericslab.droidplate.CoreFragment;
+
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentArg;
+import org.androidannotations.annotations.ViewById;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+@EFragment(resName = "dp_fragment_webview")
+public class DPWebViewFragment extends CoreFragment {
+
+    @ViewById
+    WebView webView;
+
+    @FragmentArg
+    String url;
+
+
+    public DPWebViewFragment() {
+        // Required empty public constructor
+    }
+
+    @AfterViews
+    void afterViews() {
+        setupWebView();
+
+        if (url == null || url.isEmpty()) {
+            onError("Can not load empty url");
+        } else {
+            webView.loadUrl(url);
+        }
+    }
+
+    private void setupWebView() {
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                super.onReceivedError(view, request, error);
+                onError(error.getDescription().toString());
+            }
+        });
+    }
+
+    void onError(String description) {
+        webView.stopLoading();
+        webView.loadData(description, "text/html", "utf-8");
+    }
+
+}

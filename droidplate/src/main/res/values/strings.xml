@@ -44,6 +44,7 @@
 
     <!-- Prompt -->
     <string name="prompt.registration"><u>Not registered yet? <b>Sign up now</b></u></string>
+    <string name="prompt.tos">By clicking <b>Registration</b> you are agreeing to our <a href=" http://www.apache.org/licenses/">Terms of Service</a> and confirming that you are at least 13 years old.</string>
 
     <!-- msg -->
     <string name="msg.pleaseWait">Please wait for a moment…</string>
