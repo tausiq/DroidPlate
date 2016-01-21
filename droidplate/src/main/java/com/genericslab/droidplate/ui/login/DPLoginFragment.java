@@ -16,6 +16,7 @@ import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.app.CoreApplication;
 import com.genericslab.droidplate.app.DroidPrefs_;
 import com.genericslab.droidplate.config.Config;
+import com.genericslab.droidplate.helper.UIUtils;
 import com.genericslab.droidplate.helper.Validate;
 
 import org.androidannotations.annotations.AfterTextChange;
@@ -97,8 +98,17 @@ public class DPLoginFragment extends CoreFragment {
 
     @Click
     void btnRegistration() {
-        ((CoreActivity) getActivity()).loadFragment(DPRegistrationFragment_.builder().build());
-//        UIUtils.alert(getActivity(), "Please contact administrator for username and password");
+        Fragment pFragment = getParentFragment();
+        if (pFragment instanceof IPager) {
+            ((IPager) pFragment).setCurrentItem(1, true);
+        } else {
+            ((CoreActivity) getActivity()).loadFragment(DPRegistrationFragment_.builder().build());
+        }
+    }
+
+    @Click
+    void btnForgotPassword() {
+        UIUtils.alert(getActivity(), "Please contact administrator for  password");
     }
 
     @Click

@@ -104,6 +104,14 @@
     </android.support.v7.widget.ButtonBarLayout>
 
     <Button
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/borderlessButtonStyle"
+        android:text="@string/label.forgot.password"
+        android:textSize="@dimen/text.size.regular"/>
+
+    <Button
         android:id="@+id/btnRegistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

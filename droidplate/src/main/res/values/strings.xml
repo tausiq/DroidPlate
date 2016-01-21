@@ -1,6 +1,6 @@
 <resources>
 
-    <!--<string name="app.name">DroidApp</string>-->
+    <string name="app.name">Droid Plate Library</string>
 
     <!-- Hints -->
     <string name="hint.enter.first.name">First name</string>
@@ -28,7 +28,7 @@
     <string name="label.agree">Agree</string>
     <string name="label.add">Add</string>
     <string name="label.signIn">Sign In</string>
-    <string name="label.forgot.password">Forgot password?</string>
+    <string name="label.forgot.password">Forgot password? <b>Click here</b></string>
     <string name="label.tryAgain">Try again</string>
     <string name="label.cancel">Cancel</string>
     <string name="label.save">Save</string>
