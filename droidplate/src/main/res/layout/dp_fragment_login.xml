@@ -1,129 +1,136 @@
-<android.support.v7.widget.ButtonBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="@dimen/activity_vertical_margin"
     tools:context="com.genericslab.droidplate.ui.login.DPLoginFragment">
-
-    <android.support.v7.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_brand"
-        android:layout_margin="@dimen/margin.4"/>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/txtEmailLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin.2"
-            android:hint="@string/hint.enter.email"
-            android:inputType="textEmailAddress"
-            android:singleLine="true"/>
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/txtPasswordLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin.4"
-            android:hint="@string/hint.enter.password"
-            android:imeActionId="@+id/login"
-            android:imeActionLabel="@string/label.login"
-            android:imeOptions="actionUnspecified"
-            android:inputType="textPassword"
-            android:singleLine="true" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/margin.4"
-        android:text="@string/label.login"
-        android:textColor="@color/white"/>
 
     <android.support.v7.widget.ButtonBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="@dimen/margin.1"
-        android:layout_marginRight="@dimen/margin.1"
-        android:layout_marginBottom="@dimen/margin.4"
-        tools:background="@color/material.core.red">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
 
-        <com.joanzapata.iconify.widget.IconButton
-            android:id="@+id/btnFacebook"
-            android:layout_width="0dp"
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            style="?android:attr/borderlessButtonStyle"
-            android:text="{fa-facebook-square #465897 36sp}"/>
+            android:src="@drawable/logo_brand"
+            android:layout_margin="@dimen/margin.4"/>
 
-        <com.joanzapata.iconify.widget.IconButton
-            android:id="@+id/btnGoogle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            style="?android:attr/borderlessButtonStyle"
-            android:text="{fa-google-plus-square #C94D2E 36sp}"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtEmailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <com.joanzapata.iconify.widget.IconButton
-            android:id="@+id/btnTwitter"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            style="?android:attr/borderlessButtonStyle"
-            android:text="{fa-twitter-square #72A8DC 36sp}"/>
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin.2"
+                android:hint="@string/hint.enter.email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"/>
 
-        <com.joanzapata.iconify.widget.IconButton
-            android:id="@+id/btnDigitsPlaceholder"
-            android:layout_width="0dp"
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txtPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin.4"
+                android:hint="@string/hint.enter.password"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/label.login"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin.4"
+            android:text="@string/label.login"
+            android:textColor="@color/white"/>
+
+        <android.support.v7.widget.ButtonBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/margin.1"
+            android:layout_marginRight="@dimen/margin.1"
+            android:layout_marginBottom="@dimen/margin.4"
+            tools:background="@color/material.core.red">
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/btnFacebook"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="{fa-facebook-square #465897 36sp}"/>
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/btnGoogle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="{fa-google-plus-square #C94D2E 36sp}"/>
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/btnTwitter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="{fa-twitter-square #72A8DC 36sp}"/>
+
+            <com.joanzapata.iconify.widget.IconButton
+                android:id="@+id/btnDigitsPlaceholder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="{fa-phone-square #73A8DC 36sp}"/>
+
+        </android.support.v7.widget.ButtonBarLayout>
+
+        <Button
+            android:id="@+id/btnForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             style="?android:attr/borderlessButtonStyle"
-            android:text="{fa-phone-square #73A8DC 36sp}"/>
+            android:text="@string/label.forgot.password"
+            android:textSize="@dimen/text.size.regular"/>
+
+        <Button
+            android:id="@+id/btnRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/msg.registration"
+            android:textSize="@dimen/text.size.regular"/>
+
+
+        <com.digits.sdk.android.DigitsAuthButton
+            android:id="@+id/btnDigits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
 
     </android.support.v7.widget.ButtonBarLayout>
-
-    <Button
-        android:id="@+id/btnForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="@string/label.forgot.password"
-        android:textSize="@dimen/text.size.regular"/>
-
-    <Button
-        android:id="@+id/btnRegistration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="?android:attr/borderlessButtonStyle"
-        android:text="@string/msg.registration"
-        android:textSize="@dimen/text.size.regular"/>
+</ScrollView>
 
 
-    <com.digits.sdk.android.DigitsAuthButton
-        android:id="@+id/btnDigits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
-
-</android.support.v7.widget.ButtonBarLayout>

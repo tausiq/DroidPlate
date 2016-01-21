@@ -2,10 +2,7 @@ package com.genericslab.droidplate.ui.common;
 
 
 import android.support.v4.app.Fragment;
-import android.webkit.WebResourceError;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import com.genericslab.droidplate.CoreFragment;
 
@@ -33,23 +30,11 @@ public class DPWebViewFragment extends CoreFragment {
 
     @AfterViews
     void afterViews() {
-        setupWebView();
-
         if (url == null || url.isEmpty()) {
-            onError("Can not load empty url");
+            onError("Can not load empty url. Please go back and try again later.");
         } else {
             webView.loadUrl(url);
         }
-    }
-
-    private void setupWebView() {
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
-                super.onReceivedError(view, request, error);
-                onError(error.getDescription().toString());
-            }
-        });
     }
 
     void onError(String description) {
