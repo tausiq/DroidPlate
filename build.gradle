@@ -43,6 +43,7 @@ project.ext {
     gsmVersion = "8.3.0"
     eventbusVersion = "2.4.0"
     commonslangVersion = "3.4"
+    retrofitVersion="2.0.0-beta3"
 }
 
 task clean(type: Delete) {

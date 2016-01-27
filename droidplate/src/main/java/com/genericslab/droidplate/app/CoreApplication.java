@@ -14,6 +14,7 @@ import com.facebook.FacebookSdk;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
+import com.genericslab.droidplate.util.ApiUtils;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.parse.Parse;
@@ -67,6 +68,11 @@ public abstract class CoreApplication extends Application {
         configureFabric();
         configureIconify();
         configureSocial();
+        configureRetrofit();
+    }
+
+    private void configureRetrofit() {
+        ApiUtils.init();
     }
 
     private void configureSocial() {
