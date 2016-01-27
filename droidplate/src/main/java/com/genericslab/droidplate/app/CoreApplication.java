@@ -1,22 +1,21 @@
 package com.genericslab.droidplate.app;
 
-import android.app.Application;
 import android.hardware.Camera;
-
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
+import android.support.multidex.MultiDexApplication;
 import com.crashlytics.android.Crashlytics;
 import com.digits.sdk.android.AuthCallback;
 import com.digits.sdk.android.Digits;
 import com.digits.sdk.android.DigitsException;
 import com.digits.sdk.android.DigitsSession;
 import com.facebook.FacebookSdk;
+import com.facebook.stetho.Stetho;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.util.ApiUtils;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
+import com.mopub.volley.RequestQueue;
 import com.parse.Parse;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterCore;
@@ -27,7 +26,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 /**
  * Created by shahab on 12/17/15.
  */
-public abstract class CoreApplication extends Application {
+public abstract class CoreApplication extends MultiDexApplication {
 
     /**
      * Logical density of this device
@@ -69,6 +68,11 @@ public abstract class CoreApplication extends Application {
         configureIconify();
         configureSocial();
         configureRetrofit();
+        configureStetho();
+    }
+
+    private void configureStetho() {
+        Stetho.initializeWithDefaults(this);
     }
 
     private void configureRetrofit() {
@@ -132,15 +136,6 @@ public abstract class CoreApplication extends Application {
                         .build());
     }
 
-    public RequestQueue getRequestQueue() {
-        // lazy initialize the request queue, the queue instance will be
-        // created when it is accessed for the first time
-        if (mRequestQueue == null) {
-            mRequestQueue = Volley.newRequestQueue(getApplicationContext());
-        }
-
-        return mRequestQueue;
-    }
 
     private Camera camera;
 
@@ -151,5 +146,4 @@ public abstract class CoreApplication extends Application {
     public void setCamera(Camera camera) {
         this.camera = camera;
     }
-
 }

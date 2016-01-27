@@ -9,7 +9,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.genericslab.droidplate.app.CoreApplication;
 import com.genericslab.droidplate.helper.Validate;
 import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.ui.dialog.LockProgressDialog;
@@ -90,17 +89,6 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
                 .commit();
     }
 
-    /**
-     * Cancels all pending requests by the specified TAG, it is important
-     * to specify a TAG so that the pending/ongoing requests can be cancelled.
-     *
-     * @param tag
-     */
-    public void cancelPendingRequests(Object tag) {
-        if (((CoreApplication) getApplication()).getRequestQueue() != null) {
-            ((CoreApplication) getApplication()).getRequestQueue() .cancelAll(tag);
-        }
-    }
 
     @Override
     public void onBackStackChanged() {
@@ -136,7 +124,6 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
     @Override
     protected void onStop() {
         super.onStop();
-        cancelPendingRequests(getTag());
     }
 
     public String getTag() {
