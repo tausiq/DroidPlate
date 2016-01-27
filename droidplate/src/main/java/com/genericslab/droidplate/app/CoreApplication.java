@@ -1,7 +1,9 @@
 package com.genericslab.droidplate.app;
 
 import android.hardware.Camera;
+import android.provider.Settings;
 import android.support.multidex.MultiDexApplication;
+
 import com.crashlytics.android.Crashlytics;
 import com.digits.sdk.android.AuthCallback;
 import com.digits.sdk.android.Digits;
@@ -145,5 +147,10 @@ public abstract class CoreApplication extends MultiDexApplication {
 
     public void setCamera(Camera camera) {
         this.camera = camera;
+    }
+
+    public String getUniqueDeviceId() {
+        return Settings.Secure.getString(this.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
     }
 }
