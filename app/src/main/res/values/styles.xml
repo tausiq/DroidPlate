@@ -1,6 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
+    <!-- Config: Extend from Droid.Theme -->
     <style name="AppTheme" parent="Droid.Theme">
         <!-- Customize your theme here. -->
         <!--<item name="colorPrimary">@color/colorPrimary</item>-->

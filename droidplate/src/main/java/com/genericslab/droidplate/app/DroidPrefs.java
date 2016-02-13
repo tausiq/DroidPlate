@@ -26,4 +26,13 @@ public interface DroidPrefs {
 
     @DefaultString("")
     String accessToken();
+
+    @DefaultString("")
+    String firstName();
+
+    @DefaultString("")
+    String lastName();
+
+    @DefaultString("")
+    String password();
 }

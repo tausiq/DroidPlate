@@ -1,5 +1,6 @@
 package com.genericslab.droidplate.util;
 
+import com.genericslab.droidplate.service.network.SelfSigningClientBuilder;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
@@ -20,7 +21,7 @@ import retrofit2.Retrofit;
  */
 public class ApiUtils {
 
-    private static String baseUrl = "https://api.github.com";
+    private static String baseUrl = "https://api.github.com/";
     private static Retrofit retroClient;
 
     public static String ISO_FORMAT = "yyyy-MM-dd'T'HH:mm:ssZ";
@@ -40,6 +41,7 @@ public class ApiUtils {
         return new OkHttpClient.Builder()
                 .addInterceptor(interceptor)
 //                .addNetworkInterceptor(new StethoInterceptor())
+
                 .build();
     }
 
@@ -48,6 +50,9 @@ public class ApiUtils {
                 .baseUrl(baseUrl)
 //                .client(getOkHttp())
                 .addConverterFactory(GsonConverterFactory.create(getGson()))
+
+//               Self-signing
+                .client(SelfSigningClientBuilder.createClient())
                 .build();
     }
 

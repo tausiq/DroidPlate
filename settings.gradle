@@ -1,1 +1,4 @@
-include ':app', ':droidplate'
+include ':app'
+
+// Config
+include ':droidplate'

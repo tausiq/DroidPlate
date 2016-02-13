@@ -9,14 +9,22 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.R;
+import com.genericslab.droidplate.app.DroidPrefs_;
+import com.genericslab.droidplate.helper.glide.ApGlideSettings;
+import com.joanzapata.iconify.IconDrawable;
+import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 import com.mopub.mobileads.MoPubView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+import org.androidannotations.annotations.sharedpreferences.Pref;
 
 /**
  * Created by shahab on 12/28/15.
@@ -30,6 +38,13 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
     @ViewById NavigationView navView;
     @ViewById
     MoPubView mopubAdd;
+
+    TextView txtName;
+    TextView txtEmail;
+    ImageView imgProfile;
+
+    @Pref
+    DroidPrefs_ prefs;
 
     @AfterViews
     void afterViews() {
@@ -49,6 +64,19 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
         toggle.syncState();
 
         navView.setNavigationItemSelectedListener(this);
+
+        txtName = (TextView) navView.getHeaderView(0).findViewById(R.id.txtName);
+        txtEmail = (TextView) navView.getHeaderView(0).findViewById(R.id.txtEmail);
+        imgProfile = (ImageView) navView.getHeaderView(0).findViewById(R.id.imgProfile);
+
+        Glide.with(this)
+                .load("https://cdn1.iconfinder.com/data/icons/free-98-icons/32/user-128.png")
+                .placeholder(new IconDrawable(this, FontAwesomeIcons.fa_user))
+                .error(new IconDrawable(this, FontAwesomeIcons.fa_user))
+                .diskCacheStrategy(ApGlideSettings.AP_DISK_CACHE_STRATEGY)
+                .fitCenter()
+                .dontAnimate()
+                .into(imgProfile);
 
 
         mopubAdd.setAdUnitId("d4a0aba637d64a9f9a05a575fa757ac2");

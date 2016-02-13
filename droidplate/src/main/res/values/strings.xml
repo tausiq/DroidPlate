@@ -34,6 +34,10 @@
     <string name="label.save">Save</string>
     <string name="label.import">Import</string>
     <string name="label.gallery">Gallery</string>
+    <string name="label.accounts">Accounts</string>
+    <string name="label.files">Files</string>
+    <string name="label.photos">Photos</string>
+    <string name="label.logout">Log out</string>
     <string name="label.share">Share</string>
     <string name="label.send">Send</string>
     <string name="label.communicate">Communicate</string>
@@ -54,9 +58,9 @@
     <string name="msg.registration">Not registered? <b>Sign up now</b></string>
 
     <!-- errors -->
-    <string name="error.required.field">This field is required</string>
-    <string name="error.invalid.email">This email address is not valid</string>
-    <string name="error.invalid.password">This password has to be at least 8 characters and can contain alpha-numeric characters and/or @#$%</string>
+    <string name="error.requiredField">This field is required</string>
+    <string name="error.invalidEmail">This email address is not valid</string>
+    <string name="error.invalidPassword">This password has to be at least 8 characters and can contain alpha-numeric characters and/or @#$%</string>
     <string name="error.mismatch.password">The passwords do not match</string>
     <string name="error.incorrect.credential">Please check your user name and password and try again</string>
     <string name="error.location.service.unavailable">Sorry, the service is not available</string>
