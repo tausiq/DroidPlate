@@ -23,7 +23,10 @@ public class Config {
     public static final String DEFAULT_USER_NAME = "Android Studio";
     public static final String DEFAULT_EMAIL = "android.studio@android.com";
 
+    public static String ISO_FORMAT = "yyyy-MM-dd'T'HH:mm:ssZ";
+
     public static final String LOG_TAG = "debug-app";
+    public static final String TRACE_TAG = "trace-app:";
 
     //
     public static final long TASK_TIMEOUT_MILLIS = 10 * 1000;   // 10 seconds

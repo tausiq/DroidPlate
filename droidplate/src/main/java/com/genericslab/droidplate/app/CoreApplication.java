@@ -14,13 +14,14 @@ import com.facebook.stetho.Stetho;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
-import com.genericslab.droidplate.util.ApiUtils;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.mopub.volley.RequestQueue;
-import com.parse.Parse;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterCore;
+
+import org.androidannotations.annotations.EApplication;
+import org.androidannotations.annotations.Trace;
 
 import io.fabric.sdk.android.Fabric;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -28,7 +29,10 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 /**
  * Created by shahab on 12/17/15.
  */
+@EApplication
 public abstract class CoreApplication extends MultiDexApplication {
+
+    private final String TRACE_TAG = Config.TRACE_TAG + "CoreApplication";
 
     /**
      * Logical density of this device
@@ -62,10 +66,10 @@ public abstract class CoreApplication extends MultiDexApplication {
         return LOGICAL_DENSITY;
     }
 
+    @Trace(tag = TRACE_TAG)
     protected void init() {
         configureCalligraphy();
         configureTracer();
-        configureParse();
         configureFabric();
         configureIconify();
         configureSocial();
@@ -78,7 +82,7 @@ public abstract class CoreApplication extends MultiDexApplication {
     }
 
     private void configureRetrofit() {
-        ApiUtils.init();
+
     }
 
     private void configureSocial() {
@@ -119,11 +123,6 @@ public abstract class CoreApplication extends MultiDexApplication {
 
     public AuthCallback getDigitsAuthCallback() {
         return digitsAuthCallback;
-    }
-
-    private void configureParse() {
-        Parse.enableLocalDatastore(this);
-        Parse.initialize(this);
     }
 
     private void configureTracer() {

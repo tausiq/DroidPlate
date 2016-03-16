@@ -52,6 +52,8 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    testCompile 'junit:junit:4.12'
+
     // Config
     compile project(':droidplate')
 

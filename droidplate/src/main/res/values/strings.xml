@@ -3,18 +3,18 @@
     <string name="app.name">Droid Plate Library</string>
 
     <!-- Hints -->
-    <string name="hint.enter.first.name">First name</string>
-    <string name="hint.enter.last.name">Last name</string>
-    <string name="hint.enter.full.name">Full name</string>
-    <string name="hint.enter.password">Password</string>
-    <string name="hint.enter.confirm.password">Enter password again</string>
-    <string name="hint.enter.phoneNumber">Phone number</string>
-    <string name="hint.enter.address">Address</string>
-    <string name="hint.enter.postCode">Postcode</string>
-    <string name="hint.enter.city">City</string>
-    <string name="hint.enter.username">Username</string>
-    <string name="hint.enter.email">Email</string>
-    <string name="hint.enter.pin">Pin</string>
+    <string name="hint.enterFirstName">First name</string>
+    <string name="hint.enterLastName">Last name</string>
+    <string name="hint.enterFullName">Full name</string>
+    <string name="hint.enterPassword">Password</string>
+    <string name="hint.enterConfirmPassword">Enter password again</string>
+    <string name="hint.enterPhoneNumber">Phone number</string>
+    <string name="hint.enterAddress">Address</string>
+    <string name="hint.enterPostcode">Postcode</string>
+    <string name="hint.enterCity">City</string>
+    <string name="hint.enterUserName">Username</string>
+    <string name="hint.enterEmail">Email</string>
+    <string name="hint.enterPin">Pin</string>
 
 
     <!-- Labels -->
@@ -42,6 +42,7 @@
     <string name="label.send">Send</string>
     <string name="label.communicate">Communicate</string>
     <string name="label.upgrade">Upgrade</string>
+    <string name="label.update">Update</string>
     <string name="label.home">Home</string>
     <string name="label.Favorites">Favorites</string>
     <string name="label.Categories">Categories</string>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.genericslab.droidapp">
 
     <application
@@ -8,7 +9,8 @@
         android:label="@string/app.name"
         android:supportsRtl="true"
         android:name=".App"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="name">
 
         <activity android:name=".MainActivity_">
         </activity>

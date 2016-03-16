@@ -2,7 +2,8 @@ package com.genericslab.droidplate.log;
 
 import android.text.TextUtils;
 
-import org.apache.commons.lang3.time.FastDateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 /**
  * Decide the format of log will be written to the file.
@@ -24,17 +25,17 @@ public abstract class LogFormatter {
      * Eclipse Style
      */
     public static class EclipseFormatter extends LogFormatter{
-        private final FastDateFormat formatter;
+        private final SimpleDateFormat formatter;
 
         public EclipseFormatter(){
-            formatter = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss.SSSZ");
+            formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.US);
         }
 
         public EclipseFormatter(String formatOfTime){
             if (TextUtils.isEmpty(formatOfTime)){
-                formatter = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss.SSSZ");
+                formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.US);
             }else{
-                formatter = FastDateFormat.getInstance(formatOfTime);
+                formatter = new SimpleDateFormat(formatOfTime, Locale.US);
             }
         }
 
@@ -65,52 +66,6 @@ public abstract class LogFormatter {
         }
     }
 
-    /**
-     * IDEA Style
-     */
-    public static class IDEAFormatter extends LogFormatter{
-        private final FastDateFormat formatter;
-
-        public IDEAFormatter(){
-            formatter = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss.SSSZ");
-        }
-
-        public IDEAFormatter(String formatOfTime){
-            if (TextUtils.isEmpty(formatOfTime)){
-                formatter = FastDateFormat.getInstance("yyyy-MM-dd HH:mm:ss.SSSZ");
-            }else{
-                formatter = FastDateFormat.getInstance(formatOfTime);
-            }
-        }
-
-        @Override
-        public String format(LEVEL level, String tag, String msg, Throwable tr) {
-            if (level == null || TextUtils.isEmpty(tag) || TextUtils.isEmpty(msg)){
-                return "";
-            }
-
-            StringBuffer buffer = new StringBuffer();
-            buffer.append(formatter.format(System.currentTimeMillis()));
-            buffer.append("\t");
-            buffer.append(android.os.Process.myPid());
-            buffer.append("-");
-            buffer.append(android.os.Process.myTid());
-            buffer.append("/?");
-            buffer.append("\t");
-            buffer.append(level.getLevelString());
-            buffer.append("/");
-            buffer.append(tag);
-            buffer.append(":");
-            buffer.append("\t");
-            buffer.append(msg);
-            if (tr != null) {
-                buffer.append(System.getProperty("line.separator"));
-                buffer.append(android.util.Log.getStackTraceString(tr));
-            }
-
-            return buffer.toString();
-        }
-    }
 
     public enum LEVEL {
         VERBOSE(2, "V"),

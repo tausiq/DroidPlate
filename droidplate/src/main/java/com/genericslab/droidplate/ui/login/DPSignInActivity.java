@@ -29,7 +29,7 @@ public class DPSignInActivity extends CoreActivity {
         ActionBar supportAB = getSupportActionBar();
         if (supportAB != null) supportAB.setDisplayShowTitleEnabled(false);
 
-        IGitAPI service = ApiUtils.getClient().create(IGitAPI.class);
+        IGitAPI service = ApiUtils.createService(IGitAPI.class);
         Call<GitResult> call = service.getUsersNamedTom("tom");
 
         call.enqueue(new retrofit2.Callback<GitResult>() {

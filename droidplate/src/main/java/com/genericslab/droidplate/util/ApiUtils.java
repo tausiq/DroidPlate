@@ -1,5 +1,6 @@
 package com.genericslab.droidplate.util;
 
+import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.service.network.SelfSigningClientBuilder;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
@@ -24,8 +25,6 @@ public class ApiUtils {
     private static String baseUrl = "https://api.github.com/";
     private static Retrofit retroClient;
 
-    public static String ISO_FORMAT = "yyyy-MM-dd'T'HH:mm:ssZ";
-
     private static OkHttpClient getOkHttp() {
         // Define the interceptor, add authentication headers
         Interceptor interceptor = new Interceptor() {
@@ -33,6 +32,8 @@ public class ApiUtils {
             public Response intercept(Chain chain) throws IOException {
                 Request newRequest = chain.request().newBuilder()
                         .addHeader("User-Agent", "Droid-app")
+                        .addHeader("Content-Type", "application/json;charset=utf-8")
+                        .addHeader("Accept", "application/json;charset=utf-8")
                         .build();
                 return chain.proceed(newRequest);
             }
@@ -45,10 +46,10 @@ public class ApiUtils {
                 .build();
     }
 
-    public static void init() {
+    private static void init() {
         retroClient = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-//                .client(getOkHttp())
+                .client(getOkHttp())
                 .addConverterFactory(GsonConverterFactory.create(getGson()))
 
 //               Self-signing
@@ -56,7 +57,7 @@ public class ApiUtils {
                 .build();
     }
 
-    public static Retrofit getClient() {
+    private static Retrofit getClient() {
         if (retroClient == null) {
             init();
         }
@@ -65,7 +66,7 @@ public class ApiUtils {
 
     private static Gson getGson() {
         return new GsonBuilder()
-                .setDateFormat(ISO_FORMAT)
+                .setDateFormat(Config.ISO_FORMAT)
 
                 // required for realm.io
                 .setExclusionStrategies(new ExclusionStrategy() {
@@ -80,5 +81,9 @@ public class ApiUtils {
                     }
                 })
                 .create();
+    }
+
+    public static <S> S createService(Class<S> serviceClass) {
+        return getClient().create(serviceClass);
     }
 }

@@ -2,8 +2,6 @@ package com.genericslab.droidplate.upgrade;
 
 import com.genericslab.droidplate.BuildConfig;
 import com.genericslab.droidplate.CoreActivity;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
 
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EBean;
@@ -24,13 +22,7 @@ public class UpgradeManager {
 
     @Background
     void init() {
-        ParseQuery<Upgrade> query = ParseQuery.getQuery(Upgrade.class);
-        try {
-            Upgrade upgrade = query.getFirst();
-            handleVersionResponse(upgrade);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @UiThread

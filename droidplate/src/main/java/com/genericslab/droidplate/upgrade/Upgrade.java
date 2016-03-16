@@ -1,13 +1,9 @@
 package com.genericslab.droidplate.upgrade;
 
-import com.parse.ParseClassName;
-import com.parse.ParseObject;
-
 /**
  * Created by shahab on 12/28/15.
  */
-@ParseClassName("Upgrade")
-public class Upgrade extends ParseObject {
+public class Upgrade {
 
     private final String COL_MIN_REQUIRED_VERSION = "minRequiredVersion";
     private final String COL_TARGET = "target";
@@ -16,15 +12,15 @@ public class Upgrade extends ParseObject {
     public Upgrade() {}
 
     public int getMinRequiredVersion() {
-        return getInt(COL_MIN_REQUIRED_VERSION);
+        return 1;
     }
 
     public int getTarget() {
-        return getInt(COL_TARGET);
+        return 2;
     }
 
     public int getForceUpgradeVersion() {
-        return getInt(COL_FORCE_UPGRADE_VERSION);
+        return 3;
     }
 
 }
