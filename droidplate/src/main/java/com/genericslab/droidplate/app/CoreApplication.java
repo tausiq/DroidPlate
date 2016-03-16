@@ -10,7 +10,6 @@ import com.digits.sdk.android.Digits;
 import com.digits.sdk.android.DigitsException;
 import com.digits.sdk.android.DigitsSession;
 import com.facebook.FacebookSdk;
-import com.facebook.stetho.Stetho;
 import com.genericslab.droidplate.R;
 import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
@@ -78,7 +77,7 @@ public abstract class CoreApplication extends MultiDexApplication {
     }
 
     private void configureStetho() {
-        Stetho.initializeWithDefaults(this);
+        //Stetho.initializeWithDefaults(this);
     }
 
     private void configureRetrofit() {

@@ -149,7 +149,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (editTextLayout.getEditText().getText().length() == 0) {
-                setError(editTextLayout, R.string.error_requiredField);
+                setError(editTextLayout, R.string.error_required_field);
                 return false;
             }
         } return true;
@@ -159,7 +159,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (!checkRegex(EMAIL_REGEX, editTextLayout.getEditText().getText().toString())) {
-                setError(editTextLayout, R.string.error_invalidEmail);
+                setError(editTextLayout, R.string.error_invalid_email);
                 return false;
             }
         } return true;
@@ -169,7 +169,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (!checkRegex(PASSWORD_REGEX, editTextLayout.getEditText().getText().toString())) {
-                setError(editTextLayout, R.string.error_invalidPassword);
+                setError(editTextLayout, R.string.error_invalid_password);
                 return false;
             }
         } return true;

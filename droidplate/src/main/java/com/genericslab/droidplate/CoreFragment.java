@@ -1,15 +1,17 @@
 package com.genericslab.droidplate;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
+import org.androidannotations.annotations.EFragment;
+
+import de.greenrobot.event.EventBus;
+import de.greenrobot.event.Subscribe;
 
 /**
  * A simple {@link Fragment} subclass.
  */
+@EFragment
 public abstract class CoreFragment extends Fragment {
 
 
@@ -17,11 +19,21 @@ public abstract class CoreFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        return super.onCreateView(inflater, container, savedInstanceState);
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onGenericEvent(Object event) {
+        // DO NOT WRITE CODE
     }
 
 }

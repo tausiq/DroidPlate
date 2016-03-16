@@ -102,7 +102,7 @@ public class FetchAddressIntentService extends IntentService {
             Tracer.e(ioException, errorMessage);
         } catch (IllegalArgumentException illegalArgumentException) {
             // Catch invalid latitude or longitude values.
-            errorMessage = getString(R.string.error_location_invalid_latlong);
+            errorMessage = getString(R.string.error_location_invalid_lat_lon);
             Tracer.e(illegalArgumentException, errorMessage + ". " +
                     "Latitude = " + location.getLatitude() +
                     ", Longitude = " + location.getLongitude());

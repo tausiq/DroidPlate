@@ -26,8 +26,6 @@ import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.sharedpreferences.Pref;
 
-import de.greenrobot.event.EventBus;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -160,18 +158,6 @@ public class DPLoginFragment extends CoreFragment {
         } else {
             btnLogin.setEnabled(false);
         }
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        EventBus.getDefault().register(this);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        EventBus.getDefault().unregister(this);
     }
 
     @Override

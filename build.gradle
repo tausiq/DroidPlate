@@ -8,7 +8,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.0.0-beta6'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -36,7 +36,7 @@ project.ext {
     minSdkVersion = 15
     targetSdkVersion = 23
 
-    supportVersion = "23.2.1"
+    supportVersion = "24.0.0-alpha1"
     annotationsVersion = "3.3.2"
     iconifyVersion = "2.1.0"
     glideVersion = "3.6.1"

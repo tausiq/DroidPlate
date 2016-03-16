@@ -41,6 +41,7 @@ android {
         exclude 'META-INF/services/javax.annotation.processing.Processor'
         exclude 'META-INF/LICENSE'
     }
+    buildToolsVersion '23.0.2'
 }
 
 // Config

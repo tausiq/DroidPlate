@@ -16,14 +16,6 @@
         android:supportsRtl="true"
         android:name=".app.CoreApplication_">
 
-        <!-- Parse configuration -->
-        <meta-data
-            android:name="com.parse.APPLICATION_ID"
-            android:value="@string/parse.application.key" />
-        <meta-data
-            android:name="com.parse.CLIENT_KEY"
-            android:value="@string/parse.client.key" />
-
         <!-- Fabric configuration -->
         <!-- CONFIG: Change fabric API key  -->
         <meta-data
@@ -54,11 +46,6 @@
         <activity android:name=".ui.drawer.DrawerActivity_" />
         <activity
             android:name=".ui.login.DPSignInActivity_">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
