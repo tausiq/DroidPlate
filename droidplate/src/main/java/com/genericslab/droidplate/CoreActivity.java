@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.helper.Validate;
 import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.ui.dialog.LockProgressDialog;
@@ -19,6 +20,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
  * Created by shahab on 12/17/15.
  */
 public abstract class CoreActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener {
+
+    protected final String TRACE_TAG = Config.TRACE_TAG + "CoreActivity";
 
     protected LockProgressDialog dialog;
 
