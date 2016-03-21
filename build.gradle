@@ -8,7 +8,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-beta6'
+        classpath 'com.android.tools.build:gradle:2.0.0-beta7'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -37,13 +37,27 @@ project.ext {
     targetSdkVersion = 23
 
     supportVersion = "24.0.0-alpha1"
-    annotationsVersion = "3.3.2"
+    annotationsVersion = "4.0.0"
     iconifyVersion = "2.1.0"
     glideVersion = "3.6.1"
     gsmVersion = "8.3.0"
     eventbusVersion = "3.0.0-beta1"
     retrofitVersion = "2.0.0-beta3"
     stethoVersion = "1.3.0"
+
+    junitVersion = "4.12"
+
+    // get the current build SHA
+    gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+
+    // get the current build time
+    buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("UTC"))
+
+    // Manifest version information!
+    versionMajor = 0
+    versionMinor = 0
+    versionPatch = 0
+    versionBuild = 1 // bump for internal builds, public betas, etc.
 }
 
 task clean(type: Delete) {
