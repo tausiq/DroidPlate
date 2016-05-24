@@ -14,6 +14,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.Response;
 
 
@@ -32,10 +33,10 @@ public class DPSignInActivity extends CoreActivity {
         IGitAPI service = ApiUtils.createService(IGitAPI.class);
         Call<GitResult> call = service.getUsersNamedTom("tom");
 
-        call.enqueue(new retrofit2.Callback<GitResult>() {
+        call.enqueue(new Callback<GitResult>() {
             @Override
-            public void onResponse(Response<GitResult> response) {
-                if (response.isSuccess()) {
+            public void onResponse(Call<GitResult> call, Response<GitResult> response) {
+                if (response.isSuccessful()) {
                     // request successful (status code 200+)
                     GitResult result = response.body();
                     Tracer.d("GitResult size: " + result.getItems().size());
@@ -45,7 +46,7 @@ public class DPSignInActivity extends CoreActivity {
             }
 
             @Override
-            public void onFailure(Throwable t) {
+            public void onFailure(Call<GitResult> call, Throwable t) {
                 Tracer.e(t, null);
             }
         });
