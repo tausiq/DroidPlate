@@ -44,8 +44,10 @@
     <string name="label.upgrade">Upgrade</string>
     <string name="label.update">Update</string>
     <string name="label.home">Home</string>
-    <string name="label.Favorites">Favorites</string>
-    <string name="label.Categories">Categories</string>
+    <string name="label.favorites">Favorites</string>
+    <string name="label.categories">Categories</string>
+    <string name="label.settings">Settings</string>
+    <string name="label.more">More</string>
 
     <!-- Prompt -->
     <string name="prompt.registration"><u>Not registered yet? <b>Sign up now</b></u></string>

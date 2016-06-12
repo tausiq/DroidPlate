@@ -41,7 +41,7 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
 
     TextView txtName;
     TextView txtEmail;
-    ImageView imgProfile;
+    ImageView avatar;
 
     @Pref
     DroidPrefs_ prefs;
@@ -67,7 +67,7 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
 
         txtName = (TextView) navView.getHeaderView(0).findViewById(R.id.txtName);
         txtEmail = (TextView) navView.getHeaderView(0).findViewById(R.id.txtEmail);
-        imgProfile = (ImageView) navView.getHeaderView(0).findViewById(R.id.imgProfile);
+        avatar = (ImageView) navView.getHeaderView(0).findViewById(R.id.avatar);
 
         Glide.with(this)
                 .load("https://cdn1.iconfinder.com/data/icons/free-98-icons/32/user-128.png")
@@ -76,7 +76,7 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
                 .diskCacheStrategy(ApGlideSettings.AP_DISK_CACHE_STRATEGY)
                 .fitCenter()
                 .dontAnimate()
-                .into(imgProfile);
+                .into(avatar);
 
 
         mopubAdd.setAdUnitId("d4a0aba637d64a9f9a05a575fa757ac2");
@@ -105,17 +105,15 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_favorites) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_settings) {
 
         }
 
-        drawerLayout.closeDrawer(GravityCompat.START);
+        drawerLayout.closeDrawers();
         return true;
     }
 }

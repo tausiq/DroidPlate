@@ -2,26 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
+
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@android:drawable/ic_menu_zoom"
-            android:title="@string/label.import" />
+            android:id="@+id/nav.home"
+            android:checked="true"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/label.home"/>
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@android:drawable/ic_menu_zoom"
-            android:title="@string/label.gallery" />
+            android:id="@+id/nav.favorites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="@string/label.favorites"/>
     </group>
 
-    <item android:title="@string/label.communicate">
+    <item android:title="@string/label.more">
         <menu>
+
             <item
-                android:id="@+id/nav_share"
-                android:icon="@android:drawable/ic_menu_zoom"
-                android:title="@string/label.share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@android:drawable/ic_menu_zoom"
-                android:title="@string/label.send" />
+                android:id="@+id/nav.settings"
+                android:icon="@drawable/ic_settings_applications_black_24dp"
+                android:title="@string/label.settings"/>
         </menu>
     </item>
 

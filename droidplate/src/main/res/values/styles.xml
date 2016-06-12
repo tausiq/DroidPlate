@@ -10,7 +10,7 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="colorControlHighlight">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent.translucent</item>
         <item name="selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:windowBackground">@color/bg.window</item>
@@ -47,6 +47,7 @@
         <item name="elevation">6dp</item>
         <item name="pressedTranslationZ">12dp</item>
         <item name="rippleColor">@android:color/white</item>
+        <item name="android:tint">@color/white</item>
     </style>
 
 </resources>
