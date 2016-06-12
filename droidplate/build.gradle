@@ -62,7 +62,8 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$supportVersion"
     compile "com.android.support:gridlayout-v7:$supportVersion"
     compile "com.android.support:cardview-v7:$supportVersion"
-    compile 'com.android.support:multidex:1.0.1'
+    compile "com.android.support:palette-v7:$supportVersion"
+    compile "com.android.support:multidex:$multiDexVersion"
 
     // =================== Google play services ===================
     // https://developers.google.com/android/guides/setup

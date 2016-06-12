@@ -36,7 +36,8 @@ project.ext {
     minSdkVersion = 15
     targetSdkVersion = 23
 
-    supportVersion = "23.2.1"
+    supportVersion = "23.4.0"
+    multiDexVersion = "1.0.1"
     annotationsVersion = "4.0.0"
     iconifyVersion = "2.1.0"
     glideVersion = "3.6.1"
