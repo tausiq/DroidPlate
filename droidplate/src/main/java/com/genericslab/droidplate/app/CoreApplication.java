@@ -15,7 +15,6 @@ import com.genericslab.droidplate.config.Config;
 import com.genericslab.droidplate.log.Tracer;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
-import com.mopub.volley.RequestQueue;
 import com.twitter.sdk.android.core.TwitterAuthConfig;
 import com.twitter.sdk.android.core.TwitterCore;
 
@@ -39,8 +38,6 @@ public abstract class CoreApplication extends MultiDexApplication {
     private static float LOGICAL_DENSITY;
 
     private static CoreApplication sInstance;
-
-    private RequestQueue mRequestQueue;
 
     private AuthCallback digitsAuthCallback;
 

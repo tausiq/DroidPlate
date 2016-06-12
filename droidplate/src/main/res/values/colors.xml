@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- theme colors -->
-    <color name="color.primary">#009688</color>
-    <color name="color.primary.dark">#00796B</color>
-    <color name="color.primary.light">#B2DFDB</color>
-    <color name="color.accent">#536DFE</color>
-    <color name="color.button.normal">@color/color.accent</color>
-    <color name="color.button.disable">#3f51b5</color>
-    <color name="color.button.pressed">#448AFF</color>
-    <color name="color.divider">#B6B6B6</color>
+    <color name="primary">#009688</color>
+    <color name="primary.dark">#00796B</color>
+    <color name="primary.light">#B2DFDB</color>
+    <color name="accent">#536DFE</color>
+    <color name="accent.translucent">#3f51b5</color>
+    <color name="button.normal">@color/accent</color>
+    <color name="button.disable">#3f51b5</color>
+    <color name="button.pressed">#448AFF</color>
+    <color name="divider">#B6B6B6</color>
 
     <!-- Background colors -->
     <color name="bg.window">#FFF5F5F5</color>
@@ -68,7 +69,7 @@
     <!-- Text colors -->
     <color name="text.primary">#212121</color>
     <color name="text.secondary">#727272</color>
-    <color name="text.link">@color/color.accent</color>
+    <color name="text.link">@color/accent</color>
 
     <!-- Complementary colors -->
     <color name="light.highlight">#DDDDDD</color>

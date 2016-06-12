@@ -1,4 +1,10 @@
 <resources>
 
+    <style name="AppTheme" parent="Droid.Theme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorControlHighlight">@color/accent.translucent</item> 
+        <item name="android:windowSharedElementsUseOverlay">false</item>
+    </style>
+
 
 </resources>

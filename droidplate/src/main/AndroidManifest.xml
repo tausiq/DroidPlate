@@ -13,8 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:supportsRtl="true"
-        android:name=".app.CoreApplication_">
+        android:supportsRtl="true">
 
         <!-- Fabric configuration -->
         <!-- CONFIG: Change fabric API key  -->

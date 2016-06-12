@@ -3,19 +3,19 @@
     <item android:state_pressed="true" >
         <shape android:shape="rectangle">
             <corners android:radius="3dip" />
-            <solid android:color="@color/color.button.pressed" />
+            <solid android:color="@color/button.normal" />
         </shape>
     </item>
     <item android:state_enabled="false">
         <shape android:shape="rectangle"  >
             <corners android:radius="3dip" />
-            <solid  android:color="@color/color.button.disable"/>
+            <solid  android:color="@color/button.normal"/>
         </shape>
     </item>
     <item >
         <shape android:shape="rectangle"  >
             <corners android:radius="3dip" />
-            <solid android:color="@color/color.button.normal" />
+            <solid android:color="@color/button.normal" />
         </shape>
     </item>
 </selector>

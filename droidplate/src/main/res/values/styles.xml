@@ -4,12 +4,17 @@
     <style name="None">
     </style>
 
+    <style name="AppTheme" parent="Droid.Theme"/>
+
     <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/color.primary</item>
-        <item name="colorPrimaryDark">@color/color.primary.dark</item>
-        <item name="colorAccent">@color/color.accent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="selectableItemBackground">@drawable/selectable_item_background</item>
+        <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:windowBackground">@color/bg.window</item>
-        <item name="colorButtonNormal">@color/color.button.normal</item>
+        <item name="colorButtonNormal">@color/button.normal</item>
         <item name="android:textColorPrimary">@color/text.primary</item>
         <item name="android:textColorSecondary">@color/text.secondary</item>
         <item name="android:textColorLink">@color/text.link</item>
@@ -31,6 +36,17 @@
         <item name="android:paddingTop">24dp</item>
         <item name="android:paddingBottom">24dp</item>
         <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Droid.Theme.FabStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin.4</item>
+        <item name="android:src">@drawable/ic_add_black_24dp</item>
+        <item name="borderWidth">0dp</item>
+        <item name="elevation">6dp</item>
+        <item name="pressedTranslationZ">12dp</item>
+        <item name="rippleColor">@android:color/white</item>
     </style>
 
 </resources>
