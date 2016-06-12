@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme"
         tools:replace="name">
 
-        <activity android:name=".MainActivity_">
+        <activity android:name=".MainActivity_"
+            android:theme="@style/AppTheme.BrandedLaunch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
