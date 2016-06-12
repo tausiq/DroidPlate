@@ -16,7 +16,6 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.genericslab.droidapp"
 
         // Config
         minSdkVersion rootProject.ext.minSdkVersion
