@@ -5,7 +5,8 @@ import android.os.Handler;
 
 import com.genericslab.droidplate.app.CoreApplication;
 
-import de.greenrobot.event.EventBus;
+import org.greenrobot.eventbus.EventBus;
+
 
 /**
  * Created by shahab on 1/2/16.

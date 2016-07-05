@@ -9,6 +9,8 @@ import android.view.SurfaceView;
 import com.genericslab.droidplate.app.CoreApplication;
 import com.genericslab.droidplate.log.Tracer;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,7 +18,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import de.greenrobot.event.EventBus;
 
 /**
  * Created by shahab on 1/2/16.

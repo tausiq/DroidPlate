@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.config.Config;
-import com.genericslab.droidplate.ui.drawer.DrawerActivity_;
+import com.genericslab.droidplate.ui.login.DPSignInActivity_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -24,7 +24,7 @@ public class MainActivity extends CoreActivity {
     @Trace(tag = TRACE_TAG)
     @AfterViews
     void afterViews() {
-        DrawerActivity_.intent(this).start();
+        DPSignInActivity_.intent(this).start();
         finish();
     }
 }

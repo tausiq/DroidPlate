@@ -44,8 +44,7 @@
 
         <activity android:name=".ui.drawer.DrawerActivity_" />
         <activity
-            android:name=".ui.login.DPSignInActivity_">
-        </activity>
+            android:name=".ui.login.DPSignInActivity_"/>
 
         <service
             android:name=".helper.location.FetchAddressIntentService"

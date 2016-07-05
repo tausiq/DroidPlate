@@ -86,7 +86,7 @@ public class DPLoginFragment extends CoreFragment {
 
     private void gotoNextScreen() {
         try {
-            Intent intent = new Intent(getActivity(), Class.forName(Config.MAIN_ACTIVITY));
+            Intent intent = new Intent(getActivity(), Class.forName(Config.HOME_ACTIVITY));
             startActivity(intent);
             getActivity().finish();
         } catch (ClassNotFoundException e) {

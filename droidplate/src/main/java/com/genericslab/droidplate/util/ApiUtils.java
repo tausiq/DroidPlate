@@ -1,7 +1,6 @@
 package com.genericslab.droidplate.util;
 
 import com.genericslab.droidplate.config.Config;
-import com.genericslab.droidplate.service.network.SelfSigningClientBuilder;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 import com.google.gson.Gson;
@@ -53,7 +52,7 @@ public class ApiUtils {
                 .addConverterFactory(GsonConverterFactory.create(getGson()))
 
 //               Self-signing
-                .client(SelfSigningClientBuilder.createClient())
+                .client(getOkHttp())
                 .build();
     }
 

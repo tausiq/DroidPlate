@@ -4,23 +4,23 @@
     package="com.genericslab.droidapp">
 
     <application
+        android:name=".App_"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".App_"
         android:theme="@style/AppTheme"
         tools:replace="name">
-
-        <activity android:name=".MainActivity_"
+        <activity
+            android:name=".MainActivity_"
             android:theme="@style/AppTheme.BrandedLaunch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
+        <activity android:name=".HomeActivity_"></activity>
     </application>
 
 </manifest>

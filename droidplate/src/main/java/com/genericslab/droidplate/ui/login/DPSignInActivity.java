@@ -1,8 +1,5 @@
 package com.genericslab.droidplate.ui.login;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
-
 import com.genericslab.droidplate.CoreActivity;
 import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.sample.retrofit.IGitAPI;
@@ -11,7 +8,6 @@ import com.genericslab.droidplate.util.ApiUtils;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.ViewById;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,14 +17,8 @@ import retrofit2.Response;
 @EActivity(resName = "dp_activity_signin")
 public class DPSignInActivity extends CoreActivity {
 
-    @ViewById
-    Toolbar toolbar;
-
     @AfterViews
     void afterViews() {
-        setSupportActionBar(toolbar);
-        ActionBar supportAB = getSupportActionBar();
-        if (supportAB != null) supportAB.setDisplayShowTitleEnabled(false);
 
         IGitAPI service = ApiUtils.createService(IGitAPI.class);
         Call<GitResult> call = service.getUsersNamedTom("tom");

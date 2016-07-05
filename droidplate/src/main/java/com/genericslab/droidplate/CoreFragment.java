@@ -4,9 +4,9 @@ package com.genericslab.droidplate;
 import android.support.v4.app.Fragment;
 
 import org.androidannotations.annotations.EFragment;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
-import de.greenrobot.event.EventBus;
-import de.greenrobot.event.Subscribe;
 
 /**
  * A simple {@link Fragment} subclass.
