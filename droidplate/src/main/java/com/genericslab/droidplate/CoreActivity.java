@@ -18,6 +18,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * Created by shahab on 12/17/15.
+ *
+ * Every Activity should extend from this
  */
 public abstract class CoreActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener {
 

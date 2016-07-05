@@ -4,13 +4,10 @@
     <style name="None">
     </style>
 
-    <style name="AppTheme" parent="Droid.Theme"/>
-
     <style name="Droid.Theme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="colorControlHighlight">@color/accent.translucent</item>
         <item name="selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:selectableItemBackground">@drawable/selectable_item_background</item>
         <item name="android:windowBackground">@color/bg.window</item>
