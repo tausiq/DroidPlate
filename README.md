@@ -11,7 +11,7 @@ Usage
 ```compile project(':droidplate')```
 * Replace the content of **build.gradle (Project: level)** file 
 ```
- // Top-level build file where you can add configuration options common to all sub-projects/modules.
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
     repositories {
@@ -21,7 +21,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.android.tools.build:gradle:2.1.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -44,18 +44,34 @@ allprojects {
 
 // CONFIG
 project.ext {
-    compileSdkVersion = 23
-    buildToolsVersion = "23.0.2"
+    compileSdkVersion = 24
+    buildToolsVersion = "24.0.0"
     minSdkVersion = 15
-    targetSdkVersion = 23
+    targetSdkVersion = 24
 
-    supportVersion = "23.1.1"
-    annotationsVersion = "3.3.2"
+    supportVersion = "24.0.0"
+    multiDexVersion = "1.0.1"
+    annotationsVersion = "4.1.0"
     iconifyVersion = "2.1.0"
     glideVersion = "3.6.1"
     gsmVersion = "8.3.0"
-    eventbusVersion = "2.4.0"
-    commonslangVersion = "3.4"
+    eventbusVersion = "3.0.0"
+    retrofitVersion = "2.0.2"
+    stethoVersion = "1.3.0"
+
+    junitVersion = "4.12"
+
+    // get the current build SHA
+    gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+
+    // get the current build time
+    buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("UTC"))
+
+    // Manifest version information!
+    versionMajor = 0
+    versionMinor = 0
+    versionPatch = 0
+    versionBuild = 1 // bump for internal builds, public betas, etc.
 }
 
 task clean(type: Delete) {
@@ -83,9 +99,8 @@ org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryErro
 # http://www.gradle.org/docs/current/userguide/multi_project_builds.html#sec:decoupled_projects
 org.gradle.parallel=true
 
+# CONFIG
 # Signature
-KEY_DEV = DEV
-VAL_DEV = "Md. Shahab Uddin"
 KEY_GIT_SHA = GIT_SHA
 KEY_BUILD_TIME = BUILD_TIME
 
