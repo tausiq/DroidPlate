@@ -45,6 +45,7 @@ project.ext {
     eventbusVersion = "3.0.0"
     retrofitVersion = "2.0.2"
     stethoVersion = "1.3.0"
+    fastAndroidNetworking = "0.1.0"
 
     junitVersion = "4.12"
 

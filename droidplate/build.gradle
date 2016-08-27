@@ -137,8 +137,7 @@ dependencies {
      * =================== Networking ===================
      */
     // http://square.github.io/retrofit/
-    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
-    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.amitshekhar.android:android-networking:$fastAndroidNetworking"
 }
 
 apt {
