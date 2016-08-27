@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
@@ -14,6 +13,9 @@ import com.genericslab.droidplate.helper.Validate;
 import com.genericslab.droidplate.log.Tracer;
 import com.genericslab.droidplate.ui.dialog.LockProgressDialog;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
@@ -21,7 +23,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
  *
  * Every Activity should extend from this
  */
-public abstract class CoreActivity extends AppCompatActivity implements FragmentManager.OnBackStackChangedListener {
+public abstract class CoreActivity extends AppCompatActivity {
 
     protected final String TRACE_TAG = Config.TRACE_TAG + "CoreActivity";
 
@@ -36,8 +38,6 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
         Tracer.v(this.getClass().getSimpleName() + " started");
 
         setTag(this.getClass().getSimpleName());
-        getSupportFragmentManager().addOnBackStackChangedListener(this);
-        homeAsUpByBackStack();
     }
 
     @Override
@@ -96,22 +96,6 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
 
 
     @Override
-    public void onBackStackChanged() {
-        homeAsUpByBackStack();
-    }
-
-    private void homeAsUpByBackStack() {
-        int backStackEntryCount = getSupportFragmentManager().getBackStackEntryCount();
-        ActionBar supportActionBar = getSupportActionBar();
-        if (supportActionBar == null) return;
-        if (backStackEntryCount > 0) {
-            supportActionBar.setDisplayHomeAsUpEnabled(true);
-        } else {
-            supportActionBar.setDisplayHomeAsUpEnabled(false);
-        }
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
@@ -127,9 +111,22 @@ public abstract class CoreActivity extends AppCompatActivity implements Fragment
     }
 
     @Override
-    protected void onStop() {
-        super.onStop();
+    public void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onGenericEvent(Object event) {
+        // DO NOT WRITE CODE
+    }
+
 
     public String getTag() {
         return tag;
