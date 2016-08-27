@@ -39,7 +39,7 @@ project.ext {
     supportVersion = "24.0.0"
     multiDexVersion = "1.0.1"
     annotationsVersion = "4.1.0"
-    iconifyVersion = "2.1.0"
+    iconifyVersion = "2.2.2"
     glideVersion = "3.6.1"
     gsmVersion = "8.3.0"
     eventbusVersion = "3.0.0"
