@@ -30,7 +30,7 @@ public class UpgradeFragment extends Fragment {
 
     @AfterViews
     void afterViews() {
-        txtMsg.setText(isForceUpgrade ? R.string.msg_force_upgrade : R.string.msg_recommended_upgrade);
+        txtMsg.setText(isForceUpgrade ? R.string.msg_forceUpgrade : R.string.msg_recommendedUpgrade);
     }
 
     @Click

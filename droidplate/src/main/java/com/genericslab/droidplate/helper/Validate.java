@@ -149,7 +149,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (editTextLayout.getEditText().getText().length() == 0) {
-                setError(editTextLayout, R.string.error_required_field);
+                setError(editTextLayout, R.string.error_requiredField);
                 return false;
             }
         } return true;
@@ -159,7 +159,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (!checkRegex(EMAIL_REGEX, editTextLayout.getEditText().getText().toString())) {
-                setError(editTextLayout, R.string.error_invalid_email);
+                setError(editTextLayout, R.string.error_invalidEmail);
                 return false;
             }
         } return true;
@@ -169,7 +169,7 @@ public final class Validate {
         if (isAvailable(editTextLayout)) {
             notNull(editTextLayout.getEditText());
             if (!checkRegex(PASSWORD_REGEX, editTextLayout.getEditText().getText().toString())) {
-                setError(editTextLayout, R.string.error_invalid_password);
+                setError(editTextLayout, R.string.error_invalidPassword);
                 return false;
             }
         } return true;
@@ -180,7 +180,7 @@ public final class Validate {
             notNull(editTextLayout.getEditText());
             notNull(follower.getEditText());
             if (!editTextLayout.getEditText().getText().toString().equals(follower.getEditText().getText().toString())) {
-                setError(follower, R.string.error_mismatch_password);
+                setError(follower, R.string.error_mismatchPassword);
                 return false;
             }
         } return true;

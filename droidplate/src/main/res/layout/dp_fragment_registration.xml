@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin.2"
-                android:hint="@string/hint.enter.email"
+                android:hint="@string/hint.enterEmail"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"/>
 
@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin.2"
-                android:hint="@string/hint.enter.password"
+                android:hint="@string/hint.enterPassword"
                 android:inputType="textPassword"
                 android:singleLine="true" />
 
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin.2"
-                android:hint="@string/hint.enter.confirm.password"
+                android:hint="@string/hint.enterConfirmPassword"
                 android:imeActionId="@+id/registration"
                 android:imeActionLabel="@string/label.done"
                 android:imeOptions="actionUnspecified"

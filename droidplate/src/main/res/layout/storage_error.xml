@@ -7,7 +7,7 @@
     android:padding="@dimen/margin.4">
 
     <com.joanzapata.iconify.widget.IconTextView
-        android:contentDescription="@string/error.external.storage.space"
+        android:contentDescription="@string/error.externalStorageSpace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin.4"
@@ -17,6 +17,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/error.external.storage.space" />
+        android:text="@string/error.externalStorageSpace" />
 
 </LinearLayout>

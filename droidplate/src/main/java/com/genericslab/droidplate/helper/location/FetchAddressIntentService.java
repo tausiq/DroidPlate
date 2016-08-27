@@ -66,7 +66,7 @@ public class FetchAddressIntentService extends IntentService {
         // Make sure that the location data was really sent over through an extra. If it wasn't,
         // send an error error message and return.
         if (location == null) {
-            errorMessage = getString(R.string.error_location_no_data_provided);
+            errorMessage = getString(R.string.error_locationNoDataProvided);
             Tracer.wtf(errorMessage);
             deliverResultToReceiver(LocationConstants.FAILURE_RESULT, errorMessage);
             return;
@@ -98,11 +98,11 @@ public class FetchAddressIntentService extends IntentService {
                     1);
         } catch (IOException ioException) {
             // Catch network or other I/O problems.
-            errorMessage = getString(R.string.error_location_service_unavailable);
+            errorMessage = getString(R.string.error_locationServiceUnavailable);
             Tracer.e(ioException, errorMessage);
         } catch (IllegalArgumentException illegalArgumentException) {
             // Catch invalid latitude or longitude values.
-            errorMessage = getString(R.string.error_location_invalid_lat_lon);
+            errorMessage = getString(R.string.error_locationInvalidLatLon);
             Tracer.e(illegalArgumentException, errorMessage + ". " +
                     "Latitude = " + location.getLatitude() +
                     ", Longitude = " + location.getLongitude());
@@ -111,7 +111,7 @@ public class FetchAddressIntentService extends IntentService {
         // Handle case where no address was found.
         if (addresses == null || addresses.size()  == 0) {
             if (errorMessage.isEmpty()) {
-                errorMessage = getString(R.string.error_location_no_address_found);
+                errorMessage = getString(R.string.error_locationNoAddressFound);
                 Tracer.e(errorMessage);
             }
             deliverResultToReceiver(LocationConstants.FAILURE_RESULT, errorMessage);
