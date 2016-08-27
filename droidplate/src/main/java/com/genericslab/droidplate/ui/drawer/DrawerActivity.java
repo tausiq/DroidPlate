@@ -60,7 +60,7 @@ public class DrawerActivity extends CoreActivity implements NavigationView.OnNav
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.nav_drawerOpen, R.string.nav_drawerClose);
-        drawerLayout.setDrawerListener(toggle);
+        drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         navView.setNavigationItemSelectedListener(this);
